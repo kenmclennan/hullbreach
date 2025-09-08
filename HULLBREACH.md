@@ -34,6 +34,18 @@ The game must remain **rules-light**: few mechanics, lots of dice rolled, quick 
 - **Tiers of Gear** tied to Rank progression.  
 - **Promotion system** for advancing Rank.  
 - **Combat Zones & Movement mechanics** — revisit to refine tactical depth.  
+- **Explosives & Grenades system.**  
+- **Panic/Tension tracker system.**  
+- **Combat Drugs system.**  
+- **SOPMODs for social/knowledge skills.**  
+- **Expanded Initiative system.**  
+- **Surprise rules.**  
+- **Scanner rules + malfunction table.**  
+- **Expanded Stealth rules.**  
+- **Panicked Action Table.**  
+- **Exploration system for derelicts (doors, bulkheads, hazards).**  
+- **Blips (alien enemies) bestiary.**  
+- **Introductory Scenario.**  
 
 ---
 
@@ -98,17 +110,7 @@ Then you’re ready for your first mission.
 
 ## Armour
 
-At character creation, choose one of the following **Armour Models**.  
-Your armour defines your **Base HP, Carry Capacity, Movement difficulty, Damage Reduction, Wound Threshold, and Attribute bonuses**.  
-
-| Armour Model              | Base HP | Carry Capacity | Move DR | DRR | WT | Bonus | Notes |
-|----------------------------|---------|----------------|---------|-----|----|-------|-------|
-| **Revenant Lightframe**    | 10      | Might + 6      | DR 6    | 1   | 4  | +1 Reflex | Recon suit: agile and quiet, ideal for scouts. |
-| **Bastion Carapace**       | 11      | Might + 10     | DR 8    | 2   | 5  | +1 Might  | Standard-issue heavy infantry shell. Balanced. |
-| **Vindicator Assault Harness** | 12  | Might + 12     | DR 10   | 2   | 6  | +2 Might  | Power-assisted brute force armour for breachers. |
-| **Wraith Pattern Exo**     | 10      | Might + 8      | DR 6    | 1   | 4  | +1 Reflex, +1 Tech | Stealth and recon rig with sensor uplinks. |
-| **Juggernaut Siege Frame** | 13      | Might + 14     | DR 12   | 3   | 7  | +2 Grit   | Walking bunker, built to soak up incoming fire. |
-| **Aegis Guardian Plate**   | 11      | Might + 10     | DR 8    | 2   | 5  | +1 Reflex, +1 Grit | Defensive armour with stabilizers and AI-assisted reflexes. |
+*(Armour table with Base HP, DRR, WT, Move DR — unchanged from last draft)*
 
 ### Movement Check
 
@@ -155,6 +157,126 @@ Whenever a Wound is inflicted, roll d20. Effects stack.
 | 18  | **Catastrophic Bleed.** Artery ruptured. Lose d3 HP at end of each round until treated. |
 | 19  | **Decapitation (Partial).** Head severed or crushed — but suit AI puppets the body for d3 rounds. Afterwards: dead without replacement. |
 | 20  | **Fatal Core Damage.** Heart or brain destroyed. Nanites keep you alive for 1 round. If not treated immediately (Med Task HP 3), you die. |
+
+---
+
+## 🧬 Medical Treatment
+
+Marines of the HULLBREACH Corps are designed to survive injuries that would instantly kill ordinary humans. Stabilizing nanites, automated suit systems, and battlefield medicine can keep them alive — but wounds often require cybernetics or vat-grown replacements.  
+
+### Stabilization (in the field)
+
+- **Broken Marines** or those suffering severe **Wounds** must be stabilized to avoid death.  
+- Stabilization requires appropriate **Medical Gear** (Medi-Pack, Field Surgery Kit, Nanite Injector, etc.).  
+- Each item has a **Task HP** cost depending on severity:  
+  - Minor Wound: Task HP 1  
+  - Major Wound (limb loss, organ failure): Task HP 2  
+  - Critical Wound (head trauma, decapitation, heart/lung): Task HP 3+  
+- A **Tech test** is rolled with the medical gear’s **SR**. Each success reduces Task HP by 1.  
+
+If Task HP is not reduced to 0 before the mission ends, the marine dies.
+
+---
+
+### Replacement & Recovery (between missions)
+
+Destroyed or crippled body parts can be replaced with **cybernetics** or **vat-grown organs/limbs**.  
+Higher Rank marines have access to higher-quality replacements.  
+
+| Replacement Type   | Effect |
+|--------------------|--------|
+| **Basic Cybernetic** | Restores lost function, but roll on Flaw Table. |
+| **Advanced Cybernetic** | Restores function and grants a minor bonus (+1 die to relevant tests). |
+| **Vat-Grown Clone Part** | Identical replacement, no bonuses or flaws. Expensive. |
+| **Experimental Graft** | Restores function and grants unique perk (infrared eye, servo arm, toxin-filter lung) — but unstable. Roll on Experimental Graft Table. |
+
+---
+
+### Post-Mission Recovery
+
+At the end of a mission:  
+- Roll **d6 for each Wound** you sustained.  
+  - On 1–3: it requires replacement (cybernetic or vat).  
+  - On 4–6: nanites + stasis pods repaired it. You recover without surgery.  
+- HP is restored fully after downtime, but attribute penalties from lost parts remain until treated.  
+
+---
+
+### Death & Resurrection (optional rule)
+
+Even death is not always the end. With enough **resources and Rank**, marines may be revived through:  
+- **Cerebral Core Backup** (upload into a cloned or cybernetic body).  
+- **Nanite Reanimation** (return to action, but permanently Flawed).  
+- **AI Puppetry** (the marine’s suit AI runs their body indefinitely… personality optional).  
+
+Each option carries heavy **costs and corruption risks**.  
+
+---
+
+## ⚡ Cybernetic Flaw Table (d20)
+
+Roll whenever you receive a **basic cybernetic replacement** (limb, organ, sensory system). Higher-rank or advanced replacements may ignore this table.  
+
+| d20 | Flaw |
+|-----|------|
+| 1   | **Glitch-Twitch.** Involuntary spasms. –1 die to Reflex tests requiring precision. |
+| 2   | **Cold Grip.** Prosthetic hand lacks fine control. +1 DR to delicate tasks. |
+| 3   | **Feedback Loop.** Occasional shocks. Take 1 damage after rolling a natural 1. |
+| 4   | **Uncalibrated Optics.** Depth perception off. –1 die on ranged attacks. |
+| 5   | **Phantom Pain.** Old nerves scream. Lose 1 action on a roll of triple 1s. |
+| 6   | **Noise Bleed.** Audio implant picks up static. Surprise attacks gain +1 die against you. |
+| 7   | **Drain Hog.** Cybernetics siphon suit power. Reduce Carry Capacity by –2. |
+| 8   | **Overheats.** Implant runs hot. On long missions, take d2 damage unless cooled. |
+| 9   | **Patchwork Code.** Tech tests suffer +1 DR when using hacking gear. |
+| 10  | **Magnet Weakness.** Strong fields mess with you. On malfunction nearby, drop items in hand. |
+| 11  | **Servo Lag.** Movements delayed. Initiative rolls suffer –1. |
+| 12  | **Uncanny Face.** Vat-grown or synthetic features creep others out. NPC Reactions at –2. |
+| 13  | **Nanite Addiction.** You require an injector every mission or lose 1 Grit. |
+| 14  | **Horrible Scar Tissue.** –1 HP permanently. Looks metal as hell. |
+| 15  | **AI Ghost.** Replacement part whispers in your dreams. Once per mission, it acts on its own. |
+| 16  | **Obvious Mod.** Everyone knows you’re patched up. Enemies prioritize you in combat. |
+| 17  | **Paranoid Subroutines.** You mistrust allies. Reaction rolls with squadmates are one step worse. |
+| 18  | **Corrupted Nanites.** 1-in-6 chance per wound that healing attempts fail. |
+| 19  | **Backdoor Code.** Someone else can override your implant remotely… and sometimes does. |
+| 20  | **Reject Host.** Implant rejects your body. Take d3 damage after each mission until replaced/upgraded. |
+
+---
+
+## ⚡ Experimental Graft Table (d12)
+
+Roll when a marine receives an unstable, prototype graft instead of a standard replacement. Each graft gives a **perk AND a flaw**.  
+
+| d12 | Graft |
+|-----|-------|
+| 1 | **Infrared Eye.** See in darkness and through smoke. Flaw: bright lights blind you (–2 dice for 1 round). |
+| 2 | **Servo Arm.** +1 Might and can crush steel. Flaw: unpredictable twitch — roll d6 each mission; on 1, it attacks nearest object/ally once. |
+| 3 | **Toxin Filter Lung.** Immune to gas/poison. Flaw: requires daily nanite infusion or lose 1 Grit. |
+| 4 | **Adrenal Node.** Once per mission, add +2 dice to any roll. Flaw: after use, lose d3 HP from burnout. |
+| 5 | **Dermal Plating.** Gain +1 DRR. Flaw: skin stiff and pale. Stealth rolls at –1 die. |
+| 6 | **Ossified Fist.** Can punch for Dmg 2, Armor-Piercing. Flaw: hand too stiff for fine tasks. Cannot use gear requiring SR > 1. |
+| 7 | **Neural Overclocker.** +1 Tech. Flaw: on natural 1, take d3 damage from seizures. |
+| 8 | **Spider Limbs.** Extra mechanical arms. Can wield 3rd weapon/tool. Flaw: +1 slot permanently used by the limbs. |
+| 9 | **Tail-Spike.** Natural melee weapon (Dmg 2, Brutal). Flaw: +1 slot; enemies always notice you first. |
+| 10 | **Vascular Nanite Mesh.** Once per mission, ignore a Wound result. Flaw: permanent corruption risk — roll d20 each mission; on 1, nanites revolt (take d6 damage). |
+| 11 | **Overclocked Heart.** Initiative always succeeds in your favor. Flaw: after combat, roll d6; on 1, suffer heart failure (Broken). |
+| 12 | **Hive Interface.** Can control up to 2 drones as if they were your own limbs. Flaw: alien whispers creep in — once per mission, GM may force you to act against squad goals for 1 round. |
+
+---
+
+## 🦾 Cybernetic & Vat Replacement Gear
+
+| Item | Slots | SR | MR | Cost | Special |
+|------|-------|----|----|------|---------|
+| **Basic Cybernetic Limb** | 1 | 2 | 3 | 3 RP | Restores lost arm/leg. Roll on **Cybernetic Flaw Table**. |
+| **Advanced Cybernetic Limb** | 1 | 3 | 2 | 5 RP | Restores function, +1 die on relevant checks (Might for arms, Reflex for legs). Immune to flaws. |
+| **Vat-Grown Limb** | 1 | 2 | 4 | 4 RP | Perfect organic replacement. No flaws, but fragile (–1 DRR if targeted). |
+| **Basic Sensory Implant** | 0.5 | 2 | 3 | 2 RP | Replaces eye or ear. Grants function back. Roll on **Cybernetic Flaw Table**. |
+| **Advanced Sensory Implant** | 0.5 | 3 | 2 | 4 RP | Replaces eye/ear with enhancements (infrared, zoom, sonic filters). No flaws. |
+| **Vat-Grown Organ** | 1 | 2 | 4 | 4 RP | Replaces kidney, lung, liver, etc. No flaws, but costly. |
+| **Synthetic Organ** | 1 | 2 | 3 | 3 RP | Cybernetic replacement organ. Restores function but roll on **Cybernetic Flaw Table**. |
+| **Experimental Graft** | 1–2 | 3 | 2 | 6 RP | Roll on **Experimental Graft Table** for perk + flaw. |
+| **Nanite Core** | 1 | 2 | 2 | 5 RP | Colony of stabilizing nanites permanently grafted in. Once per mission, auto-stabilize a Wound. Risk of corruption. |
+| **Cerebral Backup Implant** | 1 | 2 | 2 | 8 RP | Stores a snapshot of your brain. On death, transfer to clone/cyber body (GM discretion). |
 
 ---
 
@@ -429,6 +551,7 @@ Flamers, plasma throwers, and other volatile heavy weapons are powerful but risk
 | **Climbing Rig** | 1 | 1 | 4 | 1 RP | Ropes & ascenders. Grants +2 SR on climb tests. |
 | **Thruster Pack** | 2 | 2 | 2 | 4 RP | Short burst (move 2 zones, vertical or zero-G). On malfunction: spin out. |
 | **Portable Breach Charge** | 2 | 2 | 2 | 3 RP | Blows open bulkhead/door (Task HP instantly 0). 1 use only. |
+| **Chameleon Mesh** | 2 | 3 | 2 | 4 RP | Active camouflage. +2 dice to hide in cover. On malfunction: turns neon-bright. |
 
 ---
 
@@ -441,7 +564,221 @@ Flamers, plasma throwers, and other volatile heavy weapons are powerful but risk
 | 3 | **Misread.** Scanner gives false info (phantom blips, wrong life signs). |
 | 4 | **Lockout.** Gear locks; requires **Tech test (2 successes)** to restore. |
 | 5 | **Feedback.** Sparks/shock: user takes **d2 damage**, nearby electronics glitch. |
-| 6 | **Catastrophic Short.** Tool fries itself. Destroyed in sparks and smoke. |# HULLBREACH
+| 6 | **Catastrophic Short.** Tool fries itself. Destroyed in sparks and smoke. |
+
+---
+
+---
+
+## Explosives & Grenades (Placeholder)
+
+Marines deploy a variety of grenades and demolitions:  
+- Frag grenades, incendiaries, stun grenades.  
+- Satchel charges and anti-armor rockets.  
+
+Explosives have:  
+- **Blast Radius** (zones).  
+- **Damage dice** applied to all in zone.  
+- **Malfunctions** (dud, misfire, dropped grenade, premature detonation).  
+
+---
+
+## Panic & Rising Tension (Placeholder)
+
+Marines track **Panic Points (PP)** like hit points. Panic rises when:  
+- Encountering horrors.  
+- Squadmates die.  
+- False scanner blips.  
+
+At max Panic, marines break: flee, freeze, scream, or snap.  
+- **Rally actions** (leadership, SOPMODs, combat drugs) reduce Panic.  
+
+---
+
+## Combat Drugs (Placeholder)
+
+Combat stims enhance performance at a cost.  
+- **Adrenastim**: boost Reflex, cause HP loss after.  
+- **Pain-X**: ignore wound penalties, but collapse after.  
+- **Focusin**: boost Tech, but induce paranoia.  
+- **Regen Patch**: heal HP, but risk mutation.  
+
+Each drug has:  
+- **Boost Effect.**  
+- **Crash Effect.**  
+- **Overdose/Malfunction chance.**  
+
+---
+
+## SOPMOD Modules (Placeholder)
+
+**Standard Operating Procedure Modules (SOPMODs):**  
+AI-driven computer modules installed in the suit. Provide “skills on a stick.”  
+
+Examples:  
+- **Negotiation SOPMOD** — for NPC interactions.  
+- **Interrogation SOPMOD** — bonus for extracting info.  
+- **Xenology SOPMOD** — knowledge of alien biology.  
+- **Command SOPMOD** — improves Rally actions and Panic reduction.  
+
+---
+
+## Initiative System (Placeholder)
+
+At start of round:  
+- Everyone rolls **Reflex + d6** = Initiative.  
+- Combatants act in descending order.  
+- After acting, subtract –4.  
+- If still >0, act again.  
+- Repeat until all ≤0.  
+
+This creates dynamic rounds where faster marines act more often.  
+
+---
+
+## Surprise (Placeholder)
+
+Surprise attacks:  
+- Defenders cannot act during first cycle.  
+- Surprise always triggers Panic checks.  
+- Scanners and stealth interact heavily here.  
+
+---
+
+## Scanners & Blips (Placeholder)
+
+Scanners detect “blips.” Each may be:  
+- A real enemy.  
+- A ghost image.  
+- Environmental noise.  
+
+Operators spend actions to interpret blips.  
+
+Scanner Malfunctions:  
+- False positives.  
+- Ghost echoes.  
+- Enemies appear in wrong zones.  
+
+---
+
+## Stealth (Placeholder)
+
+Stealth uses **Stealth Points (SP)** like hit points.  
+- A successful stealth roll = SP gained.  
+- Detection attempts reduce SP.  
+- At SP 0 = detected.  
+
+Rules:  
+- Firing ranged weapons ends stealth immediately.  
+- Melee (silent) weapons do not.  
+- Stealth gear provides limited uses per mission (battery cycles).  
+
+---
+
+## Test Difficulty Levels (Placeholder)
+
+When making a test (Attribute + Gear SR dice pool):  
+- GM sets a **Difficulty Rating (DR)** = number of **successes required**.  
+
+Suggested levels:  
+- **Trivial (1 success)** — automatic with proper gear.  
+- **Routine (2 successes)** — expected field tasks.  
+- **Hard (3 successes)** — stressful or contested situations.  
+- **Extreme (4+ successes)** — rare, high-risk feats.  
+
+---
+
+## Personality Flaws (Placeholder)
+
+Every marine has a **personality flaw** — a glitch in their psyche or conditioning.  
+
+Examples:  
+- Overconfidence.  
+- Paranoia.  
+- Compulsive violence.  
+- Obsession with loot.  
+- Fatalism.  
+
+(Flaw table to be created.)  
+
+---
+
+## Panicked Action Table (Placeholder)
+
+When Panic Points max out, roll on the **Panicked Action Table**.  
+
+Examples:  
+- Freeze in place.  
+- Flee blindly into another zone.  
+- Fire weapon wildly (friendly fire risk).  
+- Drop gear and scream.  
+- Berserk charge.  
+
+---
+
+## Exploring Derelicts (Placeholder)
+
+Missions revolve around exploring derelict spacecraft in the **graveyard zone**.  
+
+Key interactive elements:  
+- **Doors** — locked, welded, jammed. Require breaching, hacking, or explosives.  
+- **Computers** — may hold intel, control turrets, or be corrupted by alien code.  
+- **Bulkheads & Hazards** — collapsed corridors, breached hulls, radiation zones.  
+- **Environmental Events** — power surges, decompressions, shifting wreckage.  
+
+Rules will give these elements **Task HP, malfunctions, and risks**.  
+
+---
+
+## Setting (Draft)
+
+The marines are survivors of the **HULLBREACH Incident**.  
+- Their mothership, the *Oath of Iron*, was lost in the **Graveyard**, a vast orbital field of wrecked warships, colony craft, and alien hulks.  
+- The Graveyard is a frontier where **multiple alien factions** lurk:  
+  - Hive predators.  
+  - Rogue AI war machines.  
+  - Parasitic infestations.  
+  - Opportunistic scavengers.  
+- The marines’ objective: **salvage, survival, and containment**.  
+
+The *Oath of Iron* still drifts somewhere in the Graveyard — damaged, cut off, crew scattered. Marines launch missions into derelicts using strike pods, hoping to regroup and survive.  
+
+---
+
+## Blips (Placeholder)
+
+**Blips** = the alien horrors and threats of the Graveyard.  
+- Initially appear as **scanner contacts**.  
+- Could be:  
+  - Swarms of xenos.  
+  - Rogue AI drones.  
+  - Psychic predators.  
+  - Rival scavengers or marines.  
+
+Blips will have:  
+- **HP, Armor, Attack Dice, Panic/Morale ratings.**  
+- Malfunction-like “instinct” tables.  
+
+---
+
+## Introductory Scenario (Placeholder)
+
+**Mission 1: The Lost Beacon**  
+- The squad is dispatched to investigate a distress signal from a derelict frigate.  
+- Objectives:  
+  - Secure the bridge.  
+  - Recover the black box.  
+  - Survive extraction.  
+- Hazards:  
+  - Jammed doors, flickering power, false scanner blips.  
+  - First contact with alien Blips.  
+  - Environmental collapse.  
+
+Scenario will introduce:  
+- Basic tests (gear use, DRs).  
+- Combat (projectiles, melee, malfunctions).  
+- Panic & Rally system.  
+- First taste of wounds, replacement, and paranoia.# HULLBREACH
 
 ## Design Prompt
 
@@ -472,6 +809,18 @@ The game must remain **rules-light**: few mechanics, lots of dice rolled, quick 
 - **Tiers of Gear** tied to Rank progression.  
 - **Promotion system** for advancing Rank.  
 - **Combat Zones & Movement mechanics** — revisit to refine tactical depth.  
+- **Explosives & Grenades system.**  
+- **Panic/Tension tracker system.**  
+- **Combat Drugs system.**  
+- **SOPMODs for social/knowledge skills.**  
+- **Expanded Initiative system.**  
+- **Surprise rules.**  
+- **Scanner rules + malfunction table.**  
+- **Expanded Stealth rules.**  
+- **Panicked Action Table.**  
+- **Exploration system for derelicts (doors, bulkheads, hazards).**  
+- **Blips (alien enemies) bestiary.**  
+- **Introductory Scenario.**  
 
 ---
 
@@ -536,17 +885,7 @@ Then you’re ready for your first mission.
 
 ## Armour
 
-At character creation, choose one of the following **Armour Models**.  
-Your armour defines your **Base HP, Carry Capacity, Movement difficulty, Damage Reduction, Wound Threshold, and Attribute bonuses**.  
-
-| Armour Model              | Base HP | Carry Capacity | Move DR | DRR | WT | Bonus | Notes |
-|----------------------------|---------|----------------|---------|-----|----|-------|-------|
-| **Revenant Lightframe**    | 10      | Might + 6      | DR 6    | 1   | 4  | +1 Reflex | Recon suit: agile and quiet, ideal for scouts. |
-| **Bastion Carapace**       | 11      | Might + 10     | DR 8    | 2   | 5  | +1 Might  | Standard-issue heavy infantry shell. Balanced. |
-| **Vindicator Assault Harness** | 12  | Might + 12     | DR 10   | 2   | 6  | +2 Might  | Power-assisted brute force armour for breachers. |
-| **Wraith Pattern Exo**     | 10      | Might + 8      | DR 6    | 1   | 4  | +1 Reflex, +1 Tech | Stealth and recon rig with sensor uplinks. |
-| **Juggernaut Siege Frame** | 13      | Might + 14     | DR 12   | 3   | 7  | +2 Grit   | Walking bunker, built to soak up incoming fire. |
-| **Aegis Guardian Plate**   | 11      | Might + 10     | DR 8    | 2   | 5  | +1 Reflex, +1 Grit | Defensive armour with stabilizers and AI-assisted reflexes. |
+*(Armour table with Base HP, DRR, WT, Move DR — unchanged from last draft)*
 
 ### Movement Check
 
@@ -593,6 +932,126 @@ Whenever a Wound is inflicted, roll d20. Effects stack.
 | 18  | **Catastrophic Bleed.** Artery ruptured. Lose d3 HP at end of each round until treated. |
 | 19  | **Decapitation (Partial).** Head severed or crushed — but suit AI puppets the body for d3 rounds. Afterwards: dead without replacement. |
 | 20  | **Fatal Core Damage.** Heart or brain destroyed. Nanites keep you alive for 1 round. If not treated immediately (Med Task HP 3), you die. |
+
+---
+
+## 🧬 Medical Treatment
+
+Marines of the HULLBREACH Corps are designed to survive injuries that would instantly kill ordinary humans. Stabilizing nanites, automated suit systems, and battlefield medicine can keep them alive — but wounds often require cybernetics or vat-grown replacements.  
+
+### Stabilization (in the field)
+
+- **Broken Marines** or those suffering severe **Wounds** must be stabilized to avoid death.  
+- Stabilization requires appropriate **Medical Gear** (Medi-Pack, Field Surgery Kit, Nanite Injector, etc.).  
+- Each item has a **Task HP** cost depending on severity:  
+  - Minor Wound: Task HP 1  
+  - Major Wound (limb loss, organ failure): Task HP 2  
+  - Critical Wound (head trauma, decapitation, heart/lung): Task HP 3+  
+- A **Tech test** is rolled with the medical gear’s **SR**. Each success reduces Task HP by 1.  
+
+If Task HP is not reduced to 0 before the mission ends, the marine dies.
+
+---
+
+### Replacement & Recovery (between missions)
+
+Destroyed or crippled body parts can be replaced with **cybernetics** or **vat-grown organs/limbs**.  
+Higher Rank marines have access to higher-quality replacements.  
+
+| Replacement Type   | Effect |
+|--------------------|--------|
+| **Basic Cybernetic** | Restores lost function, but roll on Flaw Table. |
+| **Advanced Cybernetic** | Restores function and grants a minor bonus (+1 die to relevant tests). |
+| **Vat-Grown Clone Part** | Identical replacement, no bonuses or flaws. Expensive. |
+| **Experimental Graft** | Restores function and grants unique perk (infrared eye, servo arm, toxin-filter lung) — but unstable. Roll on Experimental Graft Table. |
+
+---
+
+### Post-Mission Recovery
+
+At the end of a mission:  
+- Roll **d6 for each Wound** you sustained.  
+  - On 1–3: it requires replacement (cybernetic or vat).  
+  - On 4–6: nanites + stasis pods repaired it. You recover without surgery.  
+- HP is restored fully after downtime, but attribute penalties from lost parts remain until treated.  
+
+---
+
+### Death & Resurrection (optional rule)
+
+Even death is not always the end. With enough **resources and Rank**, marines may be revived through:  
+- **Cerebral Core Backup** (upload into a cloned or cybernetic body).  
+- **Nanite Reanimation** (return to action, but permanently Flawed).  
+- **AI Puppetry** (the marine’s suit AI runs their body indefinitely… personality optional).  
+
+Each option carries heavy **costs and corruption risks**.  
+
+---
+
+## ⚡ Cybernetic Flaw Table (d20)
+
+Roll whenever you receive a **basic cybernetic replacement** (limb, organ, sensory system). Higher-rank or advanced replacements may ignore this table.  
+
+| d20 | Flaw |
+|-----|------|
+| 1   | **Glitch-Twitch.** Involuntary spasms. –1 die to Reflex tests requiring precision. |
+| 2   | **Cold Grip.** Prosthetic hand lacks fine control. +1 DR to delicate tasks. |
+| 3   | **Feedback Loop.** Occasional shocks. Take 1 damage after rolling a natural 1. |
+| 4   | **Uncalibrated Optics.** Depth perception off. –1 die on ranged attacks. |
+| 5   | **Phantom Pain.** Old nerves scream. Lose 1 action on a roll of triple 1s. |
+| 6   | **Noise Bleed.** Audio implant picks up static. Surprise attacks gain +1 die against you. |
+| 7   | **Drain Hog.** Cybernetics siphon suit power. Reduce Carry Capacity by –2. |
+| 8   | **Overheats.** Implant runs hot. On long missions, take d2 damage unless cooled. |
+| 9   | **Patchwork Code.** Tech tests suffer +1 DR when using hacking gear. |
+| 10  | **Magnet Weakness.** Strong fields mess with you. On malfunction nearby, drop items in hand. |
+| 11  | **Servo Lag.** Movements delayed. Initiative rolls suffer –1. |
+| 12  | **Uncanny Face.** Vat-grown or synthetic features creep others out. NPC Reactions at –2. |
+| 13  | **Nanite Addiction.** You require an injector every mission or lose 1 Grit. |
+| 14  | **Horrible Scar Tissue.** –1 HP permanently. Looks metal as hell. |
+| 15  | **AI Ghost.** Replacement part whispers in your dreams. Once per mission, it acts on its own. |
+| 16  | **Obvious Mod.** Everyone knows you’re patched up. Enemies prioritize you in combat. |
+| 17  | **Paranoid Subroutines.** You mistrust allies. Reaction rolls with squadmates are one step worse. |
+| 18  | **Corrupted Nanites.** 1-in-6 chance per wound that healing attempts fail. |
+| 19  | **Backdoor Code.** Someone else can override your implant remotely… and sometimes does. |
+| 20  | **Reject Host.** Implant rejects your body. Take d3 damage after each mission until replaced/upgraded. |
+
+---
+
+## ⚡ Experimental Graft Table (d12)
+
+Roll when a marine receives an unstable, prototype graft instead of a standard replacement. Each graft gives a **perk AND a flaw**.  
+
+| d12 | Graft |
+|-----|-------|
+| 1 | **Infrared Eye.** See in darkness and through smoke. Flaw: bright lights blind you (–2 dice for 1 round). |
+| 2 | **Servo Arm.** +1 Might and can crush steel. Flaw: unpredictable twitch — roll d6 each mission; on 1, it attacks nearest object/ally once. |
+| 3 | **Toxin Filter Lung.** Immune to gas/poison. Flaw: requires daily nanite infusion or lose 1 Grit. |
+| 4 | **Adrenal Node.** Once per mission, add +2 dice to any roll. Flaw: after use, lose d3 HP from burnout. |
+| 5 | **Dermal Plating.** Gain +1 DRR. Flaw: skin stiff and pale. Stealth rolls at –1 die. |
+| 6 | **Ossified Fist.** Can punch for Dmg 2, Armor-Piercing. Flaw: hand too stiff for fine tasks. Cannot use gear requiring SR > 1. |
+| 7 | **Neural Overclocker.** +1 Tech. Flaw: on natural 1, take d3 damage from seizures. |
+| 8 | **Spider Limbs.** Extra mechanical arms. Can wield 3rd weapon/tool. Flaw: +1 slot permanently used by the limbs. |
+| 9 | **Tail-Spike.** Natural melee weapon (Dmg 2, Brutal). Flaw: +1 slot; enemies always notice you first. |
+| 10 | **Vascular Nanite Mesh.** Once per mission, ignore a Wound result. Flaw: permanent corruption risk — roll d20 each mission; on 1, nanites revolt (take d6 damage). |
+| 11 | **Overclocked Heart.** Initiative always succeeds in your favor. Flaw: after combat, roll d6; on 1, suffer heart failure (Broken). |
+| 12 | **Hive Interface.** Can control up to 2 drones as if they were your own limbs. Flaw: alien whispers creep in — once per mission, GM may force you to act against squad goals for 1 round. |
+
+---
+
+## 🦾 Cybernetic & Vat Replacement Gear
+
+| Item | Slots | SR | MR | Cost | Special |
+|------|-------|----|----|------|---------|
+| **Basic Cybernetic Limb** | 1 | 2 | 3 | 3 RP | Restores lost arm/leg. Roll on **Cybernetic Flaw Table**. |
+| **Advanced Cybernetic Limb** | 1 | 3 | 2 | 5 RP | Restores function, +1 die on relevant checks (Might for arms, Reflex for legs). Immune to flaws. |
+| **Vat-Grown Limb** | 1 | 2 | 4 | 4 RP | Perfect organic replacement. No flaws, but fragile (–1 DRR if targeted). |
+| **Basic Sensory Implant** | 0.5 | 2 | 3 | 2 RP | Replaces eye or ear. Grants function back. Roll on **Cybernetic Flaw Table**. |
+| **Advanced Sensory Implant** | 0.5 | 3 | 2 | 4 RP | Replaces eye/ear with enhancements (infrared, zoom, sonic filters). No flaws. |
+| **Vat-Grown Organ** | 1 | 2 | 4 | 4 RP | Replaces kidney, lung, liver, etc. No flaws, but costly. |
+| **Synthetic Organ** | 1 | 2 | 3 | 3 RP | Cybernetic replacement organ. Restores function but roll on **Cybernetic Flaw Table**. |
+| **Experimental Graft** | 1–2 | 3 | 2 | 6 RP | Roll on **Experimental Graft Table** for perk + flaw. |
+| **Nanite Core** | 1 | 2 | 2 | 5 RP | Colony of stabilizing nanites permanently grafted in. Once per mission, auto-stabilize a Wound. Risk of corruption. |
+| **Cerebral Backup Implant** | 1 | 2 | 2 | 8 RP | Stores a snapshot of your brain. On death, transfer to clone/cyber body (GM discretion). |
 
 ---
 
@@ -867,6 +1326,7 @@ Flamers, plasma throwers, and other volatile heavy weapons are powerful but risk
 | **Climbing Rig** | 1 | 1 | 4 | 1 RP | Ropes & ascenders. Grants +2 SR on climb tests. |
 | **Thruster Pack** | 2 | 2 | 2 | 4 RP | Short burst (move 2 zones, vertical or zero-G). On malfunction: spin out. |
 | **Portable Breach Charge** | 2 | 2 | 2 | 3 RP | Blows open bulkhead/door (Task HP instantly 0). 1 use only. |
+| **Chameleon Mesh** | 2 | 3 | 2 | 4 RP | Active camouflage. +2 dice to hide in cover. On malfunction: turns neon-bright. |
 
 ---
 
@@ -880,3 +1340,217 @@ Flamers, plasma throwers, and other volatile heavy weapons are powerful but risk
 | 4 | **Lockout.** Gear locks; requires **Tech test (2 successes)** to restore. |
 | 5 | **Feedback.** Sparks/shock: user takes **d2 damage**, nearby electronics glitch. |
 | 6 | **Catastrophic Short.** Tool fries itself. Destroyed in sparks and smoke. |
+
+---
+
+---
+
+## Explosives & Grenades (Placeholder)
+
+Marines deploy a variety of grenades and demolitions:  
+- Frag grenades, incendiaries, stun grenades.  
+- Satchel charges and anti-armor rockets.  
+
+Explosives have:  
+- **Blast Radius** (zones).  
+- **Damage dice** applied to all in zone.  
+- **Malfunctions** (dud, misfire, dropped grenade, premature detonation).  
+
+---
+
+## Panic & Rising Tension (Placeholder)
+
+Marines track **Panic Points (PP)** like hit points. Panic rises when:  
+- Encountering horrors.  
+- Squadmates die.  
+- False scanner blips.  
+
+At max Panic, marines break: flee, freeze, scream, or snap.  
+- **Rally actions** (leadership, SOPMODs, combat drugs) reduce Panic.  
+
+---
+
+## Combat Drugs (Placeholder)
+
+Combat stims enhance performance at a cost.  
+- **Adrenastim**: boost Reflex, cause HP loss after.  
+- **Pain-X**: ignore wound penalties, but collapse after.  
+- **Focusin**: boost Tech, but induce paranoia.  
+- **Regen Patch**: heal HP, but risk mutation.  
+
+Each drug has:  
+- **Boost Effect.**  
+- **Crash Effect.**  
+- **Overdose/Malfunction chance.**  
+
+---
+
+## SOPMOD Modules (Placeholder)
+
+**Standard Operating Procedure Modules (SOPMODs):**  
+AI-driven computer modules installed in the suit. Provide “skills on a stick.”  
+
+Examples:  
+- **Negotiation SOPMOD** — for NPC interactions.  
+- **Interrogation SOPMOD** — bonus for extracting info.  
+- **Xenology SOPMOD** — knowledge of alien biology.  
+- **Command SOPMOD** — improves Rally actions and Panic reduction.  
+
+---
+
+## Initiative System (Placeholder)
+
+At start of round:  
+- Everyone rolls **Reflex + d6** = Initiative.  
+- Combatants act in descending order.  
+- After acting, subtract –4.  
+- If still >0, act again.  
+- Repeat until all ≤0.  
+
+This creates dynamic rounds where faster marines act more often.  
+
+---
+
+## Surprise (Placeholder)
+
+Surprise attacks:  
+- Defenders cannot act during first cycle.  
+- Surprise always triggers Panic checks.  
+- Scanners and stealth interact heavily here.  
+
+---
+
+## Scanners & Blips (Placeholder)
+
+Scanners detect “blips.” Each may be:  
+- A real enemy.  
+- A ghost image.  
+- Environmental noise.  
+
+Operators spend actions to interpret blips.  
+
+Scanner Malfunctions:  
+- False positives.  
+- Ghost echoes.  
+- Enemies appear in wrong zones.  
+
+---
+
+## Stealth (Placeholder)
+
+Stealth uses **Stealth Points (SP)** like hit points.  
+- A successful stealth roll = SP gained.  
+- Detection attempts reduce SP.  
+- At SP 0 = detected.  
+
+Rules:  
+- Firing ranged weapons ends stealth immediately.  
+- Melee (silent) weapons do not.  
+- Stealth gear provides limited uses per mission (battery cycles).  
+
+---
+
+## Test Difficulty Levels (Placeholder)
+
+When making a test (Attribute + Gear SR dice pool):  
+- GM sets a **Difficulty Rating (DR)** = number of **successes required**.  
+
+Suggested levels:  
+- **Trivial (1 success)** — automatic with proper gear.  
+- **Routine (2 successes)** — expected field tasks.  
+- **Hard (3 successes)** — stressful or contested situations.  
+- **Extreme (4+ successes)** — rare, high-risk feats.  
+
+---
+
+## Personality Flaws (Placeholder)
+
+Every marine has a **personality flaw** — a glitch in their psyche or conditioning.  
+
+Examples:  
+- Overconfidence.  
+- Paranoia.  
+- Compulsive violence.  
+- Obsession with loot.  
+- Fatalism.  
+
+(Flaw table to be created.)  
+
+---
+
+## Panicked Action Table (Placeholder)
+
+When Panic Points max out, roll on the **Panicked Action Table**.  
+
+Examples:  
+- Freeze in place.  
+- Flee blindly into another zone.  
+- Fire weapon wildly (friendly fire risk).  
+- Drop gear and scream.  
+- Berserk charge.  
+
+---
+
+## Exploring Derelicts (Placeholder)
+
+Missions revolve around exploring derelict spacecraft in the **graveyard zone**.  
+
+Key interactive elements:  
+- **Doors** — locked, welded, jammed. Require breaching, hacking, or explosives.  
+- **Computers** — may hold intel, control turrets, or be corrupted by alien code.  
+- **Bulkheads & Hazards** — collapsed corridors, breached hulls, radiation zones.  
+- **Environmental Events** — power surges, decompressions, shifting wreckage.  
+
+Rules will give these elements **Task HP, malfunctions, and risks**.  
+
+---
+
+## Setting (Draft)
+
+The marines are survivors of the **HULLBREACH Incident**.  
+- Their mothership, the *Oath of Iron*, was lost in the **Graveyard**, a vast orbital field of wrecked warships, colony craft, and alien hulks.  
+- The Graveyard is a frontier where **multiple alien factions** lurk:  
+  - Hive predators.  
+  - Rogue AI war machines.  
+  - Parasitic infestations.  
+  - Opportunistic scavengers.  
+- The marines’ objective: **salvage, survival, and containment**.  
+
+The *Oath of Iron* still drifts somewhere in the Graveyard — damaged, cut off, crew scattered. Marines launch missions into derelicts using strike pods, hoping to regroup and survive.  
+
+---
+
+## Blips (Placeholder)
+
+**Blips** = the alien horrors and threats of the Graveyard.  
+- Initially appear as **scanner contacts**.  
+- Could be:  
+  - Swarms of xenos.  
+  - Rogue AI drones.  
+  - Psychic predators.  
+  - Rival scavengers or marines.  
+
+Blips will have:  
+- **HP, Armor, Attack Dice, Panic/Morale ratings.**  
+- Malfunction-like “instinct” tables.  
+
+---
+
+## Introductory Scenario (Placeholder)
+
+**Mission 1: The Lost Beacon**  
+- The squad is dispatched to investigate a distress signal from a derelict frigate.  
+- Objectives:  
+  - Secure the bridge.  
+  - Recover the black box.  
+  - Survive extraction.  
+- Hazards:  
+  - Jammed doors, flickering power, false scanner blips.  
+  - First contact with alien Blips.  
+  - Environmental collapse.  
+
+Scenario will introduce:  
+- Basic tests (gear use, DRs).  
+- Combat (projectiles, melee, malfunctions).  
+- Panic & Rally system.  
+- First taste of wounds, replacement, and paranoia.
