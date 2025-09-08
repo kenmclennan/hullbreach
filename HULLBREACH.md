@@ -26,7 +26,7 @@ The game must remain **rules-light**: few mechanics, lots of dice rolled, quick 
 
 ## Ideas to Implement
 
-- **Malfunction tables by gear type** (starting with projectile, melee, and special weapons).
+- **Malfunction tables by gear type** (projectile, melee, special weapons, utility gear, armor systems).  
 - **Medical treatments**: replacement limbs, organs, and even heads (cybernetic or vat-grown).  
 - **Advantages and flaws** tied to replacement parts, with better options at higher Rank.  
 - **Onboard AI control** when a marine is unconscious (reduced capability but not out of play).  
@@ -78,7 +78,7 @@ Base HP now comes from your **armour model** (see Armour section), plus your **G
 
 ### Choose Armour
 
-Select one of the available **Armour Models**. This defines your starting **Base HP, Carry Capacity, Movement, Damage Reduction, and Attribute bonuses**.  
+Select one of the available **Armour Models**. This defines your starting **Base HP, Carry Capacity, Movement, Damage Reduction, Wound Threshold, and Attribute bonuses**.  
 
 ### Choose Gear
 
@@ -99,16 +99,16 @@ Then you’re ready for your first mission.
 ## Armour
 
 At character creation, choose one of the following **Armour Models**.  
-Your armour defines your **Base HP, Carry Capacity, Movement difficulty, Damage Reduction, and Attribute bonuses**.  
+Your armour defines your **Base HP, Carry Capacity, Movement difficulty, Damage Reduction, Wound Threshold, and Attribute bonuses**.  
 
-| Armour Model              | Base HP | Carry Capacity | Move DR | DRR | Bonus | Notes |
-|----------------------------|---------|----------------|---------|-----|-------|-------|
-| **Revenant Lightframe**    | 10      | Might + 6      | DR 6    | 1   | +1 Reflex | Recon suit: agile and quiet, ideal for scouts. |
-| **Bastion Carapace**       | 11      | Might + 10     | DR 8    | 2   | +1 Might  | Standard-issue heavy infantry shell. Balanced. |
-| **Vindicator Assault Harness** | 12  | Might + 12     | DR 10   | 2   | +2 Might  | Power-assisted brute force armour for breachers. |
-| **Wraith Pattern Exo**     | 10      | Might + 8      | DR 6    | 1   | +1 Reflex, +1 Tech | Stealth and recon rig with sensor uplinks. |
-| **Juggernaut Siege Frame** | 13      | Might + 14     | DR 12   | 3   | +2 Grit   | Walking bunker, built to soak up incoming fire. |
-| **Aegis Guardian Plate**   | 11      | Might + 10     | DR 8    | 2   | +1 Reflex, +1 Grit | Defensive armour with stabilizers and AI-assisted reflexes. |
+| Armour Model              | Base HP | Carry Capacity | Move DR | DRR | WT | Bonus | Notes |
+|----------------------------|---------|----------------|---------|-----|----|-------|-------|
+| **Revenant Lightframe**    | 10      | Might + 6      | DR 6    | 1   | 4  | +1 Reflex | Recon suit: agile and quiet, ideal for scouts. |
+| **Bastion Carapace**       | 11      | Might + 10     | DR 8    | 2   | 5  | +1 Might  | Standard-issue heavy infantry shell. Balanced. |
+| **Vindicator Assault Harness** | 12  | Might + 12     | DR 10   | 2   | 6  | +2 Might  | Power-assisted brute force armour for breachers. |
+| **Wraith Pattern Exo**     | 10      | Might + 8      | DR 6    | 1   | 4  | +1 Reflex, +1 Tech | Stealth and recon rig with sensor uplinks. |
+| **Juggernaut Siege Frame** | 13      | Might + 14     | DR 12   | 3   | 7  | +2 Grit   | Walking bunker, built to soak up incoming fire. |
+| **Aegis Guardian Plate**   | 11      | Might + 10     | DR 8    | 2   | 5  | +1 Reflex, +1 Grit | Defensive armour with stabilizers and AI-assisted reflexes. |
 
 ### Movement Check
 
@@ -117,6 +117,44 @@ Your armour defines your **Base HP, Carry Capacity, Movement difficulty, Damage 
 - **Failure = no movement** — you stumble, snag, or your armour slows you.  
 - **Critical (3+ successes):** move 3 zones in a burst of speed.  
 - **Complication (all 1s):** your armour makes a loud clang, vents sparks, or trips — roll on the Noise/Attention Table (to be written).  
+
+---
+
+## 💥 Damage & Wounds
+
+- **Damage** reduces your armour’s **HP** after applying Damage Reduction (DRR).  
+- At **0 HP**, your **suit is destroyed** — it no longer provides DRR or movement bonuses, but you may fight on if you survive wounds.  
+- **Wound Threshold (WT):** Any single attack that deals ≥ WT damage causes a **Wound** to the marine inside the armour.  
+- Wounds bypass armour and affect the **body** (limbs, organs, senses).  
+
+---
+
+## ⚡ Wounds Table (d20)
+
+Whenever a Wound is inflicted, roll d20. Effects stack.  
+
+| d20 | Wound |
+|-----|-------|
+| 1   | **Bruised Ribs.** Wind knocked out. –1 Reflex until end of mission. |
+| 2   | **Fractured Hand.** Drop whatever you’re holding. Using 2H weapons adds +1 DR to all rolls. |
+| 3   | **Shattered Foot.** Movement hobbled. Move DR +2. |
+| 4   | **Eye Trauma.** Vision blurred or one eye lost. –1 die on ranged attacks. |
+| 5   | **Ear Rupture.** Deaf on one side. Surprise attacks from that flank gain +1 die. |
+| 6   | **Broken Arm.** Can’t use that arm. Drop items, 2H weapons impossible. |
+| 7   | **Shoulder Dislocation.** –1 Might until repaired. |
+| 8   | **Gut Puncture.** Bleeding internally. Take d3 Grit damage immediately. |
+| 9   | **Collapsed Lung.** Breathing assisted by suit. –1 Grit until cybernetic/vat replacement. |
+| 10  | **Cracked Spine.** Neural feedback. –1 Tech and Reflex. |
+| 11  | **Severed Hand.** Lose hand; can’t use 2H gear. Must be replaced. |
+| 12  | **Crushed Leg.** Can’t sprint. Move limited to 1 zone max. |
+| 13  | **Severed Arm.** –2 Might. All gear in that hand lost. |
+| 14  | **Severed Leg.** Move DR increases by +4, sprinting impossible. |
+| 15  | **Severe Internal Trauma.** Suit’s nanites keep you alive, but you take d6 Grit damage. |
+| 16  | **Organ Loss.** Kidney, spleen, liver, or equivalent. Immediate med treatment required or die at mission end. |
+| 17  | **Massive Head Trauma.** Suit AI takes partial control. –2 Reflex and Tech until replaced (cybernetic or vat head). |
+| 18  | **Catastrophic Bleed.** Artery ruptured. Lose d3 HP at end of each round until treated. |
+| 19  | **Decapitation (Partial).** Head severed or crushed — but suit AI puppets the body for d3 rounds. Afterwards: dead without replacement. |
+| 20  | **Fatal Core Damage.** Heart or brain destroyed. Nanites keep you alive for 1 round. If not treated immediately (Med Task HP 3), you die. |
 
 ---
 
@@ -362,7 +400,48 @@ Flamers, plasma throwers, and other volatile heavy weapons are powerful but risk
 
 ---
 
-*Note: Each gear type in HULLBREACH has its own malfunction table. More will be added for scanners, hacking tools, armor systems, etc.*# HULLBREACH
+## Utility Gear
+
+| Item | Slots | SR | MR | Cost | Special |
+|------|-------|----|----|------|---------|
+| **Plasma Welder** | 2 | 2 | 3 | 3 RP | Cuts through bulkheads/doors (Task HP –1); can seal doors. |
+| **Monotool** | 1 | 1 | 4 | 1 RP | Universal wrench/driver/saw; grants +1 die to basic repairs. |
+| **Industrial Cutter** | 2 | 2 | 3 | 3 RP | Destroys crates, plating, alien bone; doubles as crude melee (Dmg 2, Unreliable). |
+| **Repair Kit** | 1 | 2 | 4 | 2 RP | Restores 1 DRR to armor/gear with Tech test. Consumable (3 uses). |
+| **Armour Patch Foam** | 1 | 1 | 4 | 2 RP | Seals breaches, restores 1 DRR for remainder of mission. Consumable (1 use). |
+| **Stasis Spray** | 1 | 1 | 4 | 2 RP | Freezes corrosion/acid/bleeding. Restores 1d4 HP if applied immediately after injury. |
+| **Motion Tracker** | 1 | 2 | 3 | 2 RP | Detects movement in adjacent zones. May reveal false positives on malfunction. |
+| **Bioscanner** | 1 | 2 | 3 | 3 RP | Picks up heat/life signs; range = 2 zones. |
+| **Spectral Analyzer** | 1 | 2 | 2 | 3 RP | Detects cloaked/stealthed targets. On malfunction: ghost echoes. |
+| **Seismic Probe** | 2 | 3 | 3 | 4 RP | Maps weak points; reduces Task HP by 2 when breaching/cutting. |
+| **Survey Drone** | 2 | 2 | 2 | 4 RP | Remote recon drone (range 3 zones). On malfunction: attracts attention. |
+| **Medi-Pack** | 1 | 2 | 4 | 2 RP | Restores d6 HP with Tech test. Consumable (3 uses). |
+| **Field Surgery Kit** | 2 | 2 | 3 | 3 RP | Stabilizes crippled limbs; restores Broken results 2 or 3. |
+| **Nanite Injector** | 1 | 2 | 2 | 3 RP | Restores 2d4 HP but adds “Corruption” (flaw roll at mission end). |
+| **Cybernetic Spares** | 2 | 2 | 3 | 4 RP | Emergency replacement limb/eye; restores function but may glitch (new flaw). |
+| **Standard Cyberdeck** | 2 | 2 | 3 | 3 RP | Hack doors, turrets, terminals (Task HP –1). |
+| **Black Ice Deck** | 3 | 3 | 2 | 5 RP | Advanced hacking; can attack systems. On malfunction: feedback damage (d2). |
+| **Signal Scrambler** | 1 | 1 | 3 | 2 RP | Jams comms in 1 zone; hostile AI lose 1 die to tests. |
+| **Data Spike** | 1 | 1 | 2 | 2 RP | Brute-force breach tool. +2 SR vs electronic locks. |
+| **Override Chip** | 0.5 | 0 | – | 1 RP | Single-use passkey. Auto-unlocks a standard door/terminal. |
+| **Grapple Gun** | 2 | 2 | 3 | 3 RP | Fires line 2 zones. Move Reflex test auto-succeeds if grapple attached. |
+| **Mag Boots** | 1 | 1 | 4 | 2 RP | Walk in zero-G. On malfunction: stuck or release fails. |
+| **Climbing Rig** | 1 | 1 | 4 | 1 RP | Ropes & ascenders. Grants +2 SR on climb tests. |
+| **Thruster Pack** | 2 | 2 | 2 | 4 RP | Short burst (move 2 zones, vertical or zero-G). On malfunction: spin out. |
+| **Portable Breach Charge** | 2 | 2 | 2 | 3 RP | Blows open bulkhead/door (Task HP instantly 0). 1 use only. |
+
+---
+
+## Utility Gear Malfunctions (d6)
+
+| d6 | Malfunction |
+|----|-------------|
+| 1 | **Power Drain.** Gear flickers out, requires 1 action to reboot. |
+| 2 | **Overheat.** Tool sears user — take **1 damage**. |
+| 3 | **Misread.** Scanner gives false info (phantom blips, wrong life signs). |
+| 4 | **Lockout.** Gear locks; requires **Tech test (2 successes)** to restore. |
+| 5 | **Feedback.** Sparks/shock: user takes **d2 damage**, nearby electronics glitch. |
+| 6 | **Catastrophic Short.** Tool fries itself. Destroyed in sparks and smoke. |# HULLBREACH
 
 ## Design Prompt
 
@@ -385,13 +464,14 @@ The game must remain **rules-light**: few mechanics, lots of dice rolled, quick 
 
 ## Ideas to Implement
 
-- **Malfunction tables by gear type** (starting with projectile, melee, and special weapons).
+- **Malfunction tables by gear type** (projectile, melee, special weapons, utility gear, armor systems).  
 - **Medical treatments**: replacement limbs, organs, and even heads (cybernetic or vat-grown).  
 - **Advantages and flaws** tied to replacement parts, with better options at higher Rank.  
 - **Onboard AI control** when a marine is unconscious (reduced capability but not out of play).  
 - **Task HP system** for hacking, cutting, and repairs under fire.  
 - **Tiers of Gear** tied to Rank progression.  
 - **Promotion system** for advancing Rank.  
+- **Combat Zones & Movement mechanics** — revisit to refine tactical depth.  
 
 ---
 
@@ -432,13 +512,17 @@ No stat may start higher than +3 or lower than –3.
 
 ### Roll Hit Points
 
-Start with **Grit + d8** (minimum 1)
+Base HP now comes from your **armour model** (see Armour section), plus your **Grit** score.  
+
+### Choose Armour
+
+Select one of the available **Armour Models**. This defines your starting **Base HP, Carry Capacity, Movement, Damage Reduction, Wound Threshold, and Attribute bonuses**.  
 
 ### Choose Gear
 
    - Take basic survival kit (rations, oxygen, comms).
    - Roll or pick starting weapons, armor, and tools (see Gear section).
-   - You may only carry **Might + 8** items without penalty.
+   - You may only carry items up to your **Armour’s Carry Capacity** without penalty.
 
 ### Define Your Marine
 
@@ -447,6 +531,68 @@ Start with **Grit + d8** (minimum 1)
    - Optionally, roll on background/flaw tables (to be added).
 
 Then you’re ready for your first mission.
+
+---
+
+## Armour
+
+At character creation, choose one of the following **Armour Models**.  
+Your armour defines your **Base HP, Carry Capacity, Movement difficulty, Damage Reduction, Wound Threshold, and Attribute bonuses**.  
+
+| Armour Model              | Base HP | Carry Capacity | Move DR | DRR | WT | Bonus | Notes |
+|----------------------------|---------|----------------|---------|-----|----|-------|-------|
+| **Revenant Lightframe**    | 10      | Might + 6      | DR 6    | 1   | 4  | +1 Reflex | Recon suit: agile and quiet, ideal for scouts. |
+| **Bastion Carapace**       | 11      | Might + 10     | DR 8    | 2   | 5  | +1 Might  | Standard-issue heavy infantry shell. Balanced. |
+| **Vindicator Assault Harness** | 12  | Might + 12     | DR 10   | 2   | 6  | +2 Might  | Power-assisted brute force armour for breachers. |
+| **Wraith Pattern Exo**     | 10      | Might + 8      | DR 6    | 1   | 4  | +1 Reflex, +1 Tech | Stealth and recon rig with sensor uplinks. |
+| **Juggernaut Siege Frame** | 13      | Might + 14     | DR 12   | 3   | 7  | +2 Grit   | Walking bunker, built to soak up incoming fire. |
+| **Aegis Guardian Plate**   | 11      | Might + 10     | DR 8    | 2   | 5  | +1 Reflex, +1 Grit | Defensive armour with stabilizers and AI-assisted reflexes. |
+
+### Movement Check
+
+- To move **1 zone**, make a **Reflex test vs your armour’s Move DR**.  
+- Each **success = 1 zone moved** (max 2 zones per action).  
+- **Failure = no movement** — you stumble, snag, or your armour slows you.  
+- **Critical (3+ successes):** move 3 zones in a burst of speed.  
+- **Complication (all 1s):** your armour makes a loud clang, vents sparks, or trips — roll on the Noise/Attention Table (to be written).  
+
+---
+
+## 💥 Damage & Wounds
+
+- **Damage** reduces your armour’s **HP** after applying Damage Reduction (DRR).  
+- At **0 HP**, your **suit is destroyed** — it no longer provides DRR or movement bonuses, but you may fight on if you survive wounds.  
+- **Wound Threshold (WT):** Any single attack that deals ≥ WT damage causes a **Wound** to the marine inside the armour.  
+- Wounds bypass armour and affect the **body** (limbs, organs, senses).  
+
+---
+
+## ⚡ Wounds Table (d20)
+
+Whenever a Wound is inflicted, roll d20. Effects stack.  
+
+| d20 | Wound |
+|-----|-------|
+| 1   | **Bruised Ribs.** Wind knocked out. –1 Reflex until end of mission. |
+| 2   | **Fractured Hand.** Drop whatever you’re holding. Using 2H weapons adds +1 DR to all rolls. |
+| 3   | **Shattered Foot.** Movement hobbled. Move DR +2. |
+| 4   | **Eye Trauma.** Vision blurred or one eye lost. –1 die on ranged attacks. |
+| 5   | **Ear Rupture.** Deaf on one side. Surprise attacks from that flank gain +1 die. |
+| 6   | **Broken Arm.** Can’t use that arm. Drop items, 2H weapons impossible. |
+| 7   | **Shoulder Dislocation.** –1 Might until repaired. |
+| 8   | **Gut Puncture.** Bleeding internally. Take d3 Grit damage immediately. |
+| 9   | **Collapsed Lung.** Breathing assisted by suit. –1 Grit until cybernetic/vat replacement. |
+| 10  | **Cracked Spine.** Neural feedback. –1 Tech and Reflex. |
+| 11  | **Severed Hand.** Lose hand; can’t use 2H gear. Must be replaced. |
+| 12  | **Crushed Leg.** Can’t sprint. Move limited to 1 zone max. |
+| 13  | **Severed Arm.** –2 Might. All gear in that hand lost. |
+| 14  | **Severed Leg.** Move DR increases by +4, sprinting impossible. |
+| 15  | **Severe Internal Trauma.** Suit’s nanites keep you alive, but you take d6 Grit damage. |
+| 16  | **Organ Loss.** Kidney, spleen, liver, or equivalent. Immediate med treatment required or die at mission end. |
+| 17  | **Massive Head Trauma.** Suit AI takes partial control. –2 Reflex and Tech until replaced (cybernetic or vat head). |
+| 18  | **Catastrophic Bleed.** Artery ruptured. Lose d3 HP at end of each round until treated. |
+| 19  | **Decapitation (Partial).** Head severed or crushed — but suit AI puppets the body for d3 rounds. Afterwards: dead without replacement. |
+| 20  | **Fatal Core Damage.** Heart or brain destroyed. Nanites keep you alive for 1 round. If not treated immediately (Med Task HP 3), you die. |
 
 ---
 
@@ -692,4 +838,45 @@ Flamers, plasma throwers, and other volatile heavy weapons are powerful but risk
 
 ---
 
-*Note: Each gear type in HULLBREACH has its own malfunction table. More will be added for scanners, hacking tools, armor systems, etc.*
+## Utility Gear
+
+| Item | Slots | SR | MR | Cost | Special |
+|------|-------|----|----|------|---------|
+| **Plasma Welder** | 2 | 2 | 3 | 3 RP | Cuts through bulkheads/doors (Task HP –1); can seal doors. |
+| **Monotool** | 1 | 1 | 4 | 1 RP | Universal wrench/driver/saw; grants +1 die to basic repairs. |
+| **Industrial Cutter** | 2 | 2 | 3 | 3 RP | Destroys crates, plating, alien bone; doubles as crude melee (Dmg 2, Unreliable). |
+| **Repair Kit** | 1 | 2 | 4 | 2 RP | Restores 1 DRR to armor/gear with Tech test. Consumable (3 uses). |
+| **Armour Patch Foam** | 1 | 1 | 4 | 2 RP | Seals breaches, restores 1 DRR for remainder of mission. Consumable (1 use). |
+| **Stasis Spray** | 1 | 1 | 4 | 2 RP | Freezes corrosion/acid/bleeding. Restores 1d4 HP if applied immediately after injury. |
+| **Motion Tracker** | 1 | 2 | 3 | 2 RP | Detects movement in adjacent zones. May reveal false positives on malfunction. |
+| **Bioscanner** | 1 | 2 | 3 | 3 RP | Picks up heat/life signs; range = 2 zones. |
+| **Spectral Analyzer** | 1 | 2 | 2 | 3 RP | Detects cloaked/stealthed targets. On malfunction: ghost echoes. |
+| **Seismic Probe** | 2 | 3 | 3 | 4 RP | Maps weak points; reduces Task HP by 2 when breaching/cutting. |
+| **Survey Drone** | 2 | 2 | 2 | 4 RP | Remote recon drone (range 3 zones). On malfunction: attracts attention. |
+| **Medi-Pack** | 1 | 2 | 4 | 2 RP | Restores d6 HP with Tech test. Consumable (3 uses). |
+| **Field Surgery Kit** | 2 | 2 | 3 | 3 RP | Stabilizes crippled limbs; restores Broken results 2 or 3. |
+| **Nanite Injector** | 1 | 2 | 2 | 3 RP | Restores 2d4 HP but adds “Corruption” (flaw roll at mission end). |
+| **Cybernetic Spares** | 2 | 2 | 3 | 4 RP | Emergency replacement limb/eye; restores function but may glitch (new flaw). |
+| **Standard Cyberdeck** | 2 | 2 | 3 | 3 RP | Hack doors, turrets, terminals (Task HP –1). |
+| **Black Ice Deck** | 3 | 3 | 2 | 5 RP | Advanced hacking; can attack systems. On malfunction: feedback damage (d2). |
+| **Signal Scrambler** | 1 | 1 | 3 | 2 RP | Jams comms in 1 zone; hostile AI lose 1 die to tests. |
+| **Data Spike** | 1 | 1 | 2 | 2 RP | Brute-force breach tool. +2 SR vs electronic locks. |
+| **Override Chip** | 0.5 | 0 | – | 1 RP | Single-use passkey. Auto-unlocks a standard door/terminal. |
+| **Grapple Gun** | 2 | 2 | 3 | 3 RP | Fires line 2 zones. Move Reflex test auto-succeeds if grapple attached. |
+| **Mag Boots** | 1 | 1 | 4 | 2 RP | Walk in zero-G. On malfunction: stuck or release fails. |
+| **Climbing Rig** | 1 | 1 | 4 | 1 RP | Ropes & ascenders. Grants +2 SR on climb tests. |
+| **Thruster Pack** | 2 | 2 | 2 | 4 RP | Short burst (move 2 zones, vertical or zero-G). On malfunction: spin out. |
+| **Portable Breach Charge** | 2 | 2 | 2 | 3 RP | Blows open bulkhead/door (Task HP instantly 0). 1 use only. |
+
+---
+
+## Utility Gear Malfunctions (d6)
+
+| d6 | Malfunction |
+|----|-------------|
+| 1 | **Power Drain.** Gear flickers out, requires 1 action to reboot. |
+| 2 | **Overheat.** Tool sears user — take **1 damage**. |
+| 3 | **Misread.** Scanner gives false info (phantom blips, wrong life signs). |
+| 4 | **Lockout.** Gear locks; requires **Tech test (2 successes)** to restore. |
+| 5 | **Feedback.** Sparks/shock: user takes **d2 damage**, nearby electronics glitch. |
+| 6 | **Catastrophic Short.** Tool fries itself. Destroyed in sparks and smoke. |
