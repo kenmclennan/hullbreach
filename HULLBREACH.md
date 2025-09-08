@@ -224,6 +224,42 @@ After completing missions, marines may be promoted to higher ranks. The process 
 
 ---
 
+## Projectile Weapon Malfunctions
+
+When a projectile weapon malfunctions, roll on the following table:
+
+| d6 | Malfunction |
+|----|-------------|
+| 1   | **Accidental Ammo Ejection.** Mag or shells spill out. Weapon is empty and must be reloaded. |
+| 2   | **Jam (2).** Weapon locks. Requires a **Tech test using the weapon’s SR**, needing **2 successes** to clear. Until cleared, weapon cannot fire. |
+| 3   | **Stuck on Full Auto.** Weapon goes wild, spraying uncontrollably. Requires a **Tech test (3 successes)** to repair. If failed, weapon becomes **Jam (3)** until cleared. |
+| 4   | **Accidental Discharge.** Weapon fires into a random friendly in the same zone (ally must roll Reflex to avoid). |
+| 5   | **Burst Pipe.** The shot ruptures old ship infrastructure. Roll on the Environmental Hazards Sub-Table. |
+| 6   | **Barrel Rupture.** Weapon explodes. It is destroyed. Holder takes **d3 damage**. |
+
+### Clearing Jams
+- Clearing a jam always requires a **Tech test with the weapon’s SR**.  
+- The number in parentheses = **successes needed**.  
+- While jammed, the weapon cannot fire.  
+
+---
+
+### Environmental Hazards Sub-Table (d6)
+
+| d6 | Hazard |
+|----|--------|
+| 1–2 | **Steam Vent.** Scalding steam fills the zone. Everyone takes **1 damage** unless in sealed armor. Visibility reduced until end of round. |
+| 3–4 | **Toxic Gas.** Corrosive fumes spread. Anyone without respirators or sealed armor must succeed a **Grit test (2 successes)** or take **d2 damage**. |
+| 5   | **Acid Spray.** Pipes burst, spraying acid. Everyone in zone takes **d3 damage** and armor degrades 1 tier. |
+| 6   | **Vacuum Breach.** Hull tears open slightly. Everyone must pass a **Reflex test (2 successes)** or be pulled into cover/ground; unanchored gear may be lost. |
+
+---
+
+*Note: Each gear type in HULLBREACH will have its own malfunction table. The above applies only to projectile weapons.*
+
+
+---
+
 ## Reaction (2d6)
 
 - 2–3: Attack immediately.
@@ -475,6 +511,42 @@ After completing missions, marines may be promoted to higher ranks. The process 
 | 4    | **Hydra Rotary Cannon** | 2H | 3    | Medium  | 5  | 2  | 1   | 3      | 10 RP| Auto fire (+2 SR); Full Suppression capable; Overheat |
 | 4    | **Eidolon Silent Rifle** | 2H | 1    | Long   | 4  | 3  | 2   | 2      | 7 RP | Silent; malfunctions only on 2 ones |
 | 4    | **Colossus Breaker** | 2H    | 3     | Long    | 5  | 1  | 3   | 3      | 10 RP| Each success = 3 dmg; recoil: –1 Reflex next round |
+
+---
+
+## Projectile Weapon Malfunctions
+
+When a projectile weapon malfunctions, roll on the following table:
+
+| d6 | Malfunction |
+|----|-------------|
+| 1   | **Accidental Ammo Ejection.** Mag or shells spill out. Weapon is empty and must be reloaded. |
+| 2   | **Jam (2).** Weapon locks. Requires a **Tech test using the weapon’s SR**, needing **2 successes** to clear. Until cleared, weapon cannot fire. |
+| 3   | **Stuck on Full Auto.** Weapon goes wild, spraying uncontrollably. Requires a **Tech test (3 successes)** to repair. If failed, weapon becomes **Jam (3)** until cleared. |
+| 4   | **Accidental Discharge.** Weapon fires into a random friendly in the same zone (ally must roll Reflex to avoid). |
+| 5   | **Burst Pipe.** The shot ruptures old ship infrastructure. Roll on the Environmental Hazards Sub-Table. |
+| 6   | **Barrel Rupture.** Weapon explodes. It is destroyed. Holder takes **d3 damage**. |
+
+### Clearing Jams
+- Clearing a jam always requires a **Tech test with the weapon’s SR**.  
+- The number in parentheses = **successes needed**.  
+- While jammed, the weapon cannot fire.  
+
+---
+
+### Environmental Hazards Sub-Table (d6)
+
+| d6 | Hazard |
+|----|--------|
+| 1–2 | **Steam Vent.** Scalding steam fills the zone. Everyone takes **1 damage** unless in sealed armor. Visibility reduced until end of round. |
+| 3–4 | **Toxic Gas.** Corrosive fumes spread. Anyone without respirators or sealed armor must succeed a **Grit test (2 successes)** or take **d2 damage**. |
+| 5   | **Acid Spray.** Pipes burst, spraying acid. Everyone in zone takes **d3 damage** and armor degrades 1 tier. |
+| 6   | **Vacuum Breach.** Hull tears open slightly. Everyone must pass a **Reflex test (2 successes)** or be pulled into cover/ground; unanchored gear may be lost. |
+
+---
+
+*Note: Each gear type in HULLBREACH will have its own malfunction table. The above applies only to projectile weapons.*
+
 
 ---
 
