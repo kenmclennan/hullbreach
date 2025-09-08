@@ -33,6 +33,7 @@ The game must remain **rules-light**: few mechanics, lots of dice rolled, quick 
 - **Task HP system** for hacking, cutting, and repairs under fire.  
 - **Tiers of Gear** tied to Rank progression.  
 - **Promotion system** for advancing Rank.  
+- **Combat Zones & Movement mechanics** — revisit to refine tactical depth.  
 
 ---
 
@@ -73,13 +74,17 @@ No stat may start higher than +3 or lower than –3.
 
 ### Roll Hit Points
 
-Start with **Grit + d8** (minimum 1)
+Base HP now comes from your **armour model** (see Armour section), plus your **Grit** score.  
+
+### Choose Armour
+
+Select one of the available **Armour Models**. This defines your starting **Base HP, Carry Capacity, Movement, Damage Reduction, and Attribute bonuses**.  
 
 ### Choose Gear
 
    - Take basic survival kit (rations, oxygen, comms).
    - Roll or pick starting weapons, armor, and tools (see Gear section).
-   - You may only carry **Might + 8** items without penalty.
+   - You may only carry items up to your **Armour’s Carry Capacity** without penalty.
 
 ### Define Your Marine
 
@@ -88,6 +93,30 @@ Start with **Grit + d8** (minimum 1)
    - Optionally, roll on background/flaw tables (to be added).
 
 Then you’re ready for your first mission.
+
+---
+
+## Armour
+
+At character creation, choose one of the following **Armour Models**.  
+Your armour defines your **Base HP, Carry Capacity, Movement difficulty, Damage Reduction, and Attribute bonuses**.  
+
+| Armour Model              | Base HP | Carry Capacity | Move DR | DRR | Bonus | Notes |
+|----------------------------|---------|----------------|---------|-----|-------|-------|
+| **Revenant Lightframe**    | 10      | Might + 6      | DR 6    | 1   | +1 Reflex | Recon suit: agile and quiet, ideal for scouts. |
+| **Bastion Carapace**       | 11      | Might + 10     | DR 8    | 2   | +1 Might  | Standard-issue heavy infantry shell. Balanced. |
+| **Vindicator Assault Harness** | 12  | Might + 12     | DR 10   | 2   | +2 Might  | Power-assisted brute force armour for breachers. |
+| **Wraith Pattern Exo**     | 10      | Might + 8      | DR 6    | 1   | +1 Reflex, +1 Tech | Stealth and recon rig with sensor uplinks. |
+| **Juggernaut Siege Frame** | 13      | Might + 14     | DR 12   | 3   | +2 Grit   | Walking bunker, built to soak up incoming fire. |
+| **Aegis Guardian Plate**   | 11      | Might + 10     | DR 8    | 2   | +1 Reflex, +1 Grit | Defensive armour with stabilizers and AI-assisted reflexes. |
+
+### Movement Check
+
+- To move **1 zone**, make a **Reflex test vs your armour’s Move DR**.  
+- Each **success = 1 zone moved** (max 2 zones per action).  
+- **Failure = no movement** — you stumble, snag, or your armour slows you.  
+- **Critical (3+ successes):** move 3 zones in a burst of speed.  
+- **Complication (all 1s):** your armour makes a loud clang, vents sparks, or trips — roll on the Noise/Attention Table (to be written).  
 
 ---
 
