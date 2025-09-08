@@ -26,7 +26,7 @@ The game must remain **rules-light**: few mechanics, lots of dice rolled, quick 
 
 ## Ideas to Implement
 
-- **Malfunction tables by gear type** (starting with projectile weapons).
+- **Malfunction tables by gear type** (starting with projectile, melee, and special weapons).
 - **Medical treatments**: replacement limbs, organs, and even heads (cybernetic or vat-grown).  
 - **Advantages and flaws** tied to replacement parts, with better options at higher Rank.  
 - **Onboard AI control** when a marine is unconscious (reduced capability but not out of play).  
@@ -120,7 +120,7 @@ All tests are made using **gear**, not abstract skills. Every weapon, tool, or s
    - If you roll that many **1s** in a single test, a malfunction occurs.  
    - If you roll fewer dice than the MR, a malfunction only occurs if **all dice are 1s**.  
    - Malfunctions occur even if the test succeeds.  
-   - Roll on the relevant **Malfunction Table** (to be detailed per gear type).  
+   - Roll on the relevant **Malfunction Table**.  
 
 ---
 
@@ -191,13 +191,16 @@ After completing missions, marines may be promoted to higher ranks. The process 
 
 ## Reloading
 
-- Each weapon lists a **Reload Rating** (successes needed to reload).  
-- Reloading takes an **action**; roll dice as normal, needing that many successes to reload.  
-- If you fail, progress is kept (reload HP), but you must spend another action.  
-- Light weapons (Reload 1) reload quickly. Heavy weapons may take multiple rounds.  
+Reloading is a tense, risky process:
+
+- **Takes an action.**  
+- Make a **Reflex test using the weapon’s Skill Rating**.  
+- You must roll a number of successes equal to the weapon’s **Reload Rating**.  
+- If you succeed, the weapon is reloaded.  
+- If you fail, the reload is incomplete, but progress is kept (Reload HP).  
+- Some gear makes this process easier (see Reload Gear).  
 
 ---
-
 ## Projectile Weapons
 
 | Tier | Weapon Name          | Hands | Slots | Range   | SR | MR | Dmg | Reload | Cost | Special |
@@ -221,6 +224,22 @@ After completing missions, marines may be promoted to higher ranks. The process 
 | 4    | **Hydra Rotary Cannon** | 2H | 3    | Medium  | 5  | 2  | 1   | 3      | 10 RP| Auto fire (+2 SR); Full Suppression capable; Overheat |
 | 4    | **Eidolon Silent Rifle** | 2H | 1    | Long   | 4  | 3  | 2   | 2      | 7 RP | Silent; malfunctions only on 2 ones |
 | 4    | **Colossus Breaker** | 2H    | 3     | Long    | 5  | 1  | 3   | 3      | 10 RP| Each success = 3 dmg; recoil: –1 Reflex next round |
+
+---
+
+## Projectile Weapon Reload Gear
+
+| Tier | Gear Name            | Slots | Reloads / Effect                          | Cost | Special |
+|------|----------------------|-------|-------------------------------------------|------|---------|
+| 1    | **Ammo Pouch**       | 1     | 3 reloads (Reload 1 weapons only)         | 1 RP | Standard issue. Simple reload action. |
+| 1    | **Spare Magazine**   | 0.5   | 1 reload (handgun/SMG only)               | 0.5 RP | Can be stashed in pockets. |
+| 2    | **Bandolier Rig**    | 1     | 4 reloads (any weapon)                    | 2 RP | May reload as free action once per mission. |
+| 2    | **Drum Magazine**    | 1     | 2 reloads (LMG/SMG/Shotgun only)          | 2 RP | Reload Rating reduced by 1. |
+| 2    | **Ammo Satchel**     | 2     | 6 reloads (mixed weapon types)            | 3 RP | Bulky. Takes 2 hands to access in combat. |
+| 3    | **Belt Feed Unit**   | 2     | Continuous feed: 5 reloads (LMG/MG only)  | 4 RP | Ignore Reload Rating 2 once per combat. |
+| 3    | **Quick-Loader Frame** | 1   | 3 reloads (any)                           | 4 RP | Reduce Reload Rating by 1 (min 1). |
+| 4    | **Ammo Backpack**    | 3     | Continuous feed: 8 reloads (any 2H weapon)| 6 RP | Can sustain Auto/Suppression for 3 turns before Ammo Die is rolled. |
+| 4    | **Auto-Loader Module** | 2   | 4 reloads (any)                           | 7 RP | Reloads occur automatically when weapon empties; no action needed. |
 
 ---
 
@@ -255,45 +274,66 @@ When a projectile weapon malfunctions, roll on the following table:
 
 ---
 
-*Note: Each gear type in HULLBREACH will have its own malfunction table. The above applies only to projectile weapons.*
+## Melee Weapons
 
-
----
-
-## Reaction (2d6)
-
-- 2–3: Attack immediately.
-- 4–6: Hostile.
-- 7–8: Indifferent.
-- 9–10: Cautious/neutral.
-- 11–12: Helpful.
-
----
-
-## Morale
-
-Enemies rarely fight to the death. Roll **2d6 vs Morale** when:
-
-- Leader is killed.
-- Half the group is gone.
-- One has ⅓ HP left.
-
-If roll > Morale:
-
-- 1–3 flee.
-- 4–6 surrender.
+| Tier | Weapon Name         | Hands | Slots | Range | SR | MR | Dmg | Reload | Cost | Special |
+|------|---------------------|-------|-------|-------|----|----|-----|--------|------|---------|
+| 1    | **Combat Knife**    | 1H    | 1     | Short | 2  | 4  | 1   | —      | 1 RP | Always ready; can be thrown (Short, Dmg 1) |
+| 1    | **Shock Baton**     | 1H    | 1     | Short | 2  | 3  | 1   | —      | 2 RP | Stun: on 2+ successes, target loses 1 action |
+| 2    | **Chainsword**      | 1H    | 2     | Short | 3  | 3  | 2   | —      | 3 RP | Brutal; Unreliable |
+| 2    | **Power Axe**       | 2H    | 2     | Short | 3  | 2  | 3   | —      | 4 RP | Armor-Piercing; Kickback |
+| 3    | **Monomolecular Blade** | 1H | 1   | Short | 4  | 3  | 2   | —      | 5 RP | Ignores armor on a crit |
+| 3    | **Chainfist**       | 2H    | 3     | Short | 4  | 2  | 3   | —      | 6 RP | Counts as breaching tool (Task HP –1 per roll) |
+| 4    | **Power Hammer**    | 2H    | 3     | Short | 5  | 2  | 4   | —      | 8 RP | Stuns all enemies in same zone on crit |
+| 4    | **Void Scythe**     | 2H    | 2     | Short | 5  | 1  | 3   | —      | 9 RP | Shredding; may sweep across 2 targets |
 
 ---
 
-## Advancement
+## Melee Weapon Malfunctions
 
-At mission end:
+When a melee weapon (chainsword, power axe, etc.) malfunctions, roll on this table:
 
-- **HP:** Roll 6d10; if ≥ max HP, gain +d6.
-- **Attributes:** Roll d6 vs each stat.  
-  - If ≥ score, increase +1 (max +6).  
-  - If lower, decrease –1 (min –3).  
-# HULLBREACH
+| d6 | Malfunction |
+|----|-------------|
+| 1   | **Slipped Grip.** You fumble the weapon. Costs 1 action to recover. |
+| 2   | **Stuck Fast.** Weapon bites deep into wall, floor, or enemy. Requires a **Might test (2 successes)** to pull free. Until then, it’s stuck. |
+| 3   | **Overload.** Power field or chain drive overheats. Take **d2 damage** from feedback; weapon is unusable until repaired (Tech 2). |
+| 4   | **Kickback.** Weapon recoils violently. You fall prone unless you pass a **Reflex test (2 successes)**. |
+| 5   | **Friendly Nick.** In the chaos, your swing clips an ally in the same zone for **d2 damage**. |
+| 6   | **Catastrophic Break.** Blade shatters / chain seizes. Weapon is destroyed in a spray of shards or sparks; you take **d3 damage**. |
+
+---
+
+## Special Weapons
+
+| Tier | Weapon Name          | Hands | Slots | Range   | SR | MR | Dmg | Reload | Cost | Special |
+|------|----------------------|-------|-------|---------|----|----|-----|--------|------|---------|
+| 1    | **Incendiary Thrower** | 2H  | 2     | Short   | 2  | 3  | 2   | 1      | 3 RP | Area attack (all in zone); Unreliable |
+| 2    | **Flame Projector**  | 2H    | 2     | Short   | 3  | 2  | 2   | 2      | 4 RP | Suppression capable; Shredding |
+| 2    | **Plasma Torch**     | 1H    | 1     | Short   | 2  | 3  | 2   | 1      | 3 RP | Dual-use: melee cutter or ranged blast (Short) |
+| 3    | **Heavy Flamer**     | 2H    | 3     | Medium  | 4  | 2  | 3   | 2      | 6 RP | Area attack (zone + adjacent); Overheat |
+| 3    | **Plasma Ejector**   | 2H    | 2     | Medium  | 4  | 2  | 3   | 2      | 6 RP | Armor-Piercing; Friendly Splash |
+| 4    | **Inferno Cannon**   | 2H    | 3     | Long    | 5  | 2  | 4   | 3      | 9 RP | Full Suppression capable; area burns for d3 rounds |
+| 4    | **Plasma Incinerator** | 2H | 3     | Medium  | 5  | 1  | 4   | 3      | 10 RP| Catastrophic on crit fail (auto Malfunction) |
+
+---
+
+## Special Weapon Malfunctions
+
+Flamers, plasma throwers, and other volatile heavy weapons are powerful but risky. When they malfunction, roll on this table:
+
+| d6 | Malfunction |
+|----|-------------|
+| 1   | **Pilot Light Out.** Flamer fails to ignite. Spend 1 action to reignite. |
+| 2   | **Fuel Leak.** Tank or hose leaks. You are drenched in flammable liquid. Next fire source that hits you deals **+d6 damage**. |
+| 3   | **Backwash.** Fuel vents backwards. Take **d3 damage** and armor degrades 1 tier. |
+| 4   | **Blowback.** Plasma vent or fuel line bursts. Everyone in same zone makes a **Reflex test (2 successes)** or takes **d2 damage**. |
+| 5   | **Friendly Splash.** Flame jet arcs wide, catching an ally in the same zone for **d3 damage**. |
+| 6   | **Catastrophic Explosion.** Tank or plasma coil detonates. You take **d6 damage**; all others in Short range take **d3 damage**. Weapon destroyed. |
+
+---
+
+*Note: Each gear type in HULLBREACH has its own malfunction table. More will be added for scanners, hacking tools, armor systems, etc.*# HULLBREACH
 
 ## Design Prompt
 
@@ -316,7 +356,7 @@ The game must remain **rules-light**: few mechanics, lots of dice rolled, quick 
 
 ## Ideas to Implement
 
-- **Malfunction tables by gear type** (starting with projectile weapons).
+- **Malfunction tables by gear type** (starting with projectile, melee, and special weapons).
 - **Medical treatments**: replacement limbs, organs, and even heads (cybernetic or vat-grown).  
 - **Advantages and flaws** tied to replacement parts, with better options at higher Rank.  
 - **Onboard AI control** when a marine is unconscious (reduced capability but not out of play).  
@@ -410,7 +450,7 @@ All tests are made using **gear**, not abstract skills. Every weapon, tool, or s
    - If you roll that many **1s** in a single test, a malfunction occurs.  
    - If you roll fewer dice than the MR, a malfunction only occurs if **all dice are 1s**.  
    - Malfunctions occur even if the test succeeds.  
-   - Roll on the relevant **Malfunction Table** (to be detailed per gear type).  
+   - Roll on the relevant **Malfunction Table**.  
 
 ---
 
@@ -481,13 +521,16 @@ After completing missions, marines may be promoted to higher ranks. The process 
 
 ## Reloading
 
-- Each weapon lists a **Reload Rating** (successes needed to reload).  
-- Reloading takes an **action**; roll dice as normal, needing that many successes to reload.  
-- If you fail, progress is kept (reload HP), but you must spend another action.  
-- Light weapons (Reload 1) reload quickly. Heavy weapons may take multiple rounds.  
+Reloading is a tense, risky process:
+
+- **Takes an action.**  
+- Make a **Reflex test using the weapon’s Skill Rating**.  
+- You must roll a number of successes equal to the weapon’s **Reload Rating**.  
+- If you succeed, the weapon is reloaded.  
+- If you fail, the reload is incomplete, but progress is kept (Reload HP).  
+- Some gear makes this process easier (see Reload Gear).  
 
 ---
-
 ## Projectile Weapons
 
 | Tier | Weapon Name          | Hands | Slots | Range   | SR | MR | Dmg | Reload | Cost | Special |
@@ -511,6 +554,22 @@ After completing missions, marines may be promoted to higher ranks. The process 
 | 4    | **Hydra Rotary Cannon** | 2H | 3    | Medium  | 5  | 2  | 1   | 3      | 10 RP| Auto fire (+2 SR); Full Suppression capable; Overheat |
 | 4    | **Eidolon Silent Rifle** | 2H | 1    | Long   | 4  | 3  | 2   | 2      | 7 RP | Silent; malfunctions only on 2 ones |
 | 4    | **Colossus Breaker** | 2H    | 3     | Long    | 5  | 1  | 3   | 3      | 10 RP| Each success = 3 dmg; recoil: –1 Reflex next round |
+
+---
+
+## Projectile Weapon Reload Gear
+
+| Tier | Gear Name            | Slots | Reloads / Effect                          | Cost | Special |
+|------|----------------------|-------|-------------------------------------------|------|---------|
+| 1    | **Ammo Pouch**       | 1     | 3 reloads (Reload 1 weapons only)         | 1 RP | Standard issue. Simple reload action. |
+| 1    | **Spare Magazine**   | 0.5   | 1 reload (handgun/SMG only)               | 0.5 RP | Can be stashed in pockets. |
+| 2    | **Bandolier Rig**    | 1     | 4 reloads (any weapon)                    | 2 RP | May reload as free action once per mission. |
+| 2    | **Drum Magazine**    | 1     | 2 reloads (LMG/SMG/Shotgun only)          | 2 RP | Reload Rating reduced by 1. |
+| 2    | **Ammo Satchel**     | 2     | 6 reloads (mixed weapon types)            | 3 RP | Bulky. Takes 2 hands to access in combat. |
+| 3    | **Belt Feed Unit**   | 2     | Continuous feed: 5 reloads (LMG/MG only)  | 4 RP | Ignore Reload Rating 2 once per combat. |
+| 3    | **Quick-Loader Frame** | 1   | 3 reloads (any)                           | 4 RP | Reduce Reload Rating by 1 (min 1). |
+| 4    | **Ammo Backpack**    | 3     | Continuous feed: 8 reloads (any 2H weapon)| 6 RP | Can sustain Auto/Suppression for 3 turns before Ammo Die is rolled. |
+| 4    | **Auto-Loader Module** | 2   | 4 reloads (any)                           | 7 RP | Reloads occur automatically when weapon empties; no action needed. |
 
 ---
 
@@ -545,41 +604,63 @@ When a projectile weapon malfunctions, roll on the following table:
 
 ---
 
-*Note: Each gear type in HULLBREACH will have its own malfunction table. The above applies only to projectile weapons.*
+## Melee Weapons
 
-
----
-
-## Reaction (2d6)
-
-- 2–3: Attack immediately.
-- 4–6: Hostile.
-- 7–8: Indifferent.
-- 9–10: Cautious/neutral.
-- 11–12: Helpful.
-
----
-
-## Morale
-
-Enemies rarely fight to the death. Roll **2d6 vs Morale** when:
-
-- Leader is killed.
-- Half the group is gone.
-- One has ⅓ HP left.
-
-If roll > Morale:
-
-- 1–3 flee.
-- 4–6 surrender.
+| Tier | Weapon Name         | Hands | Slots | Range | SR | MR | Dmg | Reload | Cost | Special |
+|------|---------------------|-------|-------|-------|----|----|-----|--------|------|---------|
+| 1    | **Combat Knife**    | 1H    | 1     | Short | 2  | 4  | 1   | —      | 1 RP | Always ready; can be thrown (Short, Dmg 1) |
+| 1    | **Shock Baton**     | 1H    | 1     | Short | 2  | 3  | 1   | —      | 2 RP | Stun: on 2+ successes, target loses 1 action |
+| 2    | **Chainsword**      | 1H    | 2     | Short | 3  | 3  | 2   | —      | 3 RP | Brutal; Unreliable |
+| 2    | **Power Axe**       | 2H    | 2     | Short | 3  | 2  | 3   | —      | 4 RP | Armor-Piercing; Kickback |
+| 3    | **Monomolecular Blade** | 1H | 1   | Short | 4  | 3  | 2   | —      | 5 RP | Ignores armor on a crit |
+| 3    | **Chainfist**       | 2H    | 3     | Short | 4  | 2  | 3   | —      | 6 RP | Counts as breaching tool (Task HP –1 per roll) |
+| 4    | **Power Hammer**    | 2H    | 3     | Short | 5  | 2  | 4   | —      | 8 RP | Stuns all enemies in same zone on crit |
+| 4    | **Void Scythe**     | 2H    | 2     | Short | 5  | 1  | 3   | —      | 9 RP | Shredding; may sweep across 2 targets |
 
 ---
 
-## Advancement
+## Melee Weapon Malfunctions
 
-At mission end:
+When a melee weapon (chainsword, power axe, etc.) malfunctions, roll on this table:
 
-- **HP:** Roll 6d10; if ≥ max HP, gain +d6.
-- **Attributes:** Roll d6 vs each stat.  
-  - If ≥ score, increase +1 (max +6).  
-  - If lower, decrease –1 (min –3).  
+| d6 | Malfunction |
+|----|-------------|
+| 1   | **Slipped Grip.** You fumble the weapon. Costs 1 action to recover. |
+| 2   | **Stuck Fast.** Weapon bites deep into wall, floor, or enemy. Requires a **Might test (2 successes)** to pull free. Until then, it’s stuck. |
+| 3   | **Overload.** Power field or chain drive overheats. Take **d2 damage** from feedback; weapon is unusable until repaired (Tech 2). |
+| 4   | **Kickback.** Weapon recoils violently. You fall prone unless you pass a **Reflex test (2 successes)**. |
+| 5   | **Friendly Nick.** In the chaos, your swing clips an ally in the same zone for **d2 damage**. |
+| 6   | **Catastrophic Break.** Blade shatters / chain seizes. Weapon is destroyed in a spray of shards or sparks; you take **d3 damage**. |
+
+---
+
+## Special Weapons
+
+| Tier | Weapon Name          | Hands | Slots | Range   | SR | MR | Dmg | Reload | Cost | Special |
+|------|----------------------|-------|-------|---------|----|----|-----|--------|------|---------|
+| 1    | **Incendiary Thrower** | 2H  | 2     | Short   | 2  | 3  | 2   | 1      | 3 RP | Area attack (all in zone); Unreliable |
+| 2    | **Flame Projector**  | 2H    | 2     | Short   | 3  | 2  | 2   | 2      | 4 RP | Suppression capable; Shredding |
+| 2    | **Plasma Torch**     | 1H    | 1     | Short   | 2  | 3  | 2   | 1      | 3 RP | Dual-use: melee cutter or ranged blast (Short) |
+| 3    | **Heavy Flamer**     | 2H    | 3     | Medium  | 4  | 2  | 3   | 2      | 6 RP | Area attack (zone + adjacent); Overheat |
+| 3    | **Plasma Ejector**   | 2H    | 2     | Medium  | 4  | 2  | 3   | 2      | 6 RP | Armor-Piercing; Friendly Splash |
+| 4    | **Inferno Cannon**   | 2H    | 3     | Long    | 5  | 2  | 4   | 3      | 9 RP | Full Suppression capable; area burns for d3 rounds |
+| 4    | **Plasma Incinerator** | 2H | 3     | Medium  | 5  | 1  | 4   | 3      | 10 RP| Catastrophic on crit fail (auto Malfunction) |
+
+---
+
+## Special Weapon Malfunctions
+
+Flamers, plasma throwers, and other volatile heavy weapons are powerful but risky. When they malfunction, roll on this table:
+
+| d6 | Malfunction |
+|----|-------------|
+| 1   | **Pilot Light Out.** Flamer fails to ignite. Spend 1 action to reignite. |
+| 2   | **Fuel Leak.** Tank or hose leaks. You are drenched in flammable liquid. Next fire source that hits you deals **+d6 damage**. |
+| 3   | **Backwash.** Fuel vents backwards. Take **d3 damage** and armor degrades 1 tier. |
+| 4   | **Blowback.** Plasma vent or fuel line bursts. Everyone in same zone makes a **Reflex test (2 successes)** or takes **d2 damage**. |
+| 5   | **Friendly Splash.** Flame jet arcs wide, catching an ally in the same zone for **d3 damage**. |
+| 6   | **Catastrophic Explosion.** Tank or plasma coil detonates. You take **d6 damage**; all others in Short range take **d3 damage**. Weapon destroyed. |
+
+---
+
+*Note: Each gear type in HULLBREACH has its own malfunction table. More will be added for scanners, hacking tools, armor systems, etc.*
