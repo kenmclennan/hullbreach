@@ -1,0 +1,17 @@
+{
+    "workbench.colorCustomizations": {
+        "activityBar.activeBackground": "#9bb882",
+        "activityBar.background": "#9bb882",
+        "activityBar.foreground": "#15202b",
+        "activityBar.inactiveForeground": "#15202b99",
+        "activityBarBadge.background": "#516d8e",
+        "activityBarBadge.foreground": "#e7e7e7",
+        "sash.hoverBorder": "#9bb882",
+        "tab.activeBorder": "#9bb882"
+    },
+    "peacock.color": "#81a562",
+    "cSpell.words": [
+        "callsign",
+        "HULLBREACH"
+    ]
+}
