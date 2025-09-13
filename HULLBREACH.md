@@ -76,10 +76,10 @@ You may choose your **Armour Model**. This determines how much gear you can carr
 
 | Armour Model   | Hit Points | Armour Rating | Manoeuvre Rating | Power Rating | Carry Capacity | Computer Rating | Malfunction Rating | Notes                  |
 | -------------- | ---------- | ------------- | ---------------- | ------------ | -------------- | --------------- | ------------------ | ---------------------- |
-| **Wraith**     | 8          | 1             | 3                | 1            | 7              | 2               | 3                  | Fast and lightweight   |
-| **Vindicator** | 10         | 1             | 2                | 2            | 9              | 1               | 3                  | Standard issue         |
+| **Wraith**     | 8          | 1             | 3                | 1            | 8              | 2               | 3                  | Fast and lightweight   |
+| **Vindicator** | 10         | 1             | 2                | 2            | 10             | 1               | 3                  | Standard issue         |
 | **Bastion**    | 12         | 2             | 1                | 3            | 8              | 1               | 3                  | Tough and lumbering    |
-| **Guardian**   | 10         | 1             | 1                | 2            | 10             | 3               | 3                  | Good for support roles |
+| **Guardian**   | 10         | 1             | 1                | 2            | 12             | 3               | 3                  | Good for support roles |
 
 1. **Hit Points**: This is the total amount of damage you can sustain before your suit is destroyed.
 2. **Armour Rating**: This is your Armour Rating. All incoming damage is reduced by this amount.
@@ -130,88 +130,98 @@ Give your marine a trait. You may roll or choose from the following if you wish.
 
 ## 3. Gear
 
+| Gear Trait | Description                                       |
+| ---------- | ------------------------------------------------- |
+| Depleting  | Malfunction Rating decreases by 1 after each use. |
+| Effective  | Double success count                              |
+
 ### 3.1 Utility Gear
 
-TBD:- I need to review these items and add Tiers. Include upgrades to the basic armour equipment.
-
-| Tier | Item                       | Slots | SR  | MR  | Cost | Description                                                                           |
-| ---- | -------------------------- | ----- | --- | --- | ---- | ------------------------------------------------------------------------------------- |
-|      | **Armour Patch Foam**      | 1     | 1   | 4   | 2 RP | Seals breaches, restores 1 DRR for remainder of mission. Consumable (1 use).          |
-|      | **Bioscanner**             | 1     | 2   | 3   | 3 RP | Picks up heat/life signs; range = 2 zones.                                            |
-|      | **Black Ice Deck**         | 3     | 3   | 2   | 5 RP | Advanced hacking; can attack systems. On malfunction: feedback damage (d2).           |
-|      | **Chameleon Mesh**         | 2     | 3   | 2   | 4 RP | Active camouflage. +2 dice to hide in cover. On malfunction: turns neon-bright.       |
-|      | **Climbing Rig**           | 1     | 1   | 4   | 1 RP | Ropes & ascenders. Grants +2 SR on climb tests.                                       |
-|      | **Cybernetic Spares**      | 2     | 2   | 3   | 4 RP | Emergency replacement limb/eye; restores function but may glitch (new flaw).          |
-|      | **Data Spike**             | 1     | 1   | 2   | 2 RP | Brute-force breach tool. +2 SR vs electronic locks.                                   |
-|      | **Field Surgery Kit**      | 2     | 2   | 3   | 3 RP | Stabilizes crippled limbs; restores Broken results 2 or 3.                            |
-|      | **Grapple Gun**            | 2     | 2   | 3   | 3 RP | Fires line 2 zones. Move Reflex test auto-succeeds if grapple attached.               |
-|      | **Industrial Cutter**      | 2     | 2   | 3   | 3 RP | Destroys crates, plating, alien bone; doubles as crude melee (Dmg 2, Unreliable).     |
-|      | **Mag Boots**              | 1     | 1   | 4   | 2 RP | Walk in zero-G. On malfunction: stuck or release fails.                               |
-|      | **Medi-Pack**              | 1     | 2   | 4   | 2 RP | Restores d6 HP with Tech test. Consumable (3 uses).                                   |
-|      | **Monotool**               | 1     | 1   | 4   | 1 RP | Universal wrench/driver/saw; grants +1 die to basic repairs.                          |
-|      | **Motion Tracker**         | 1     | 2   | 3   | 2 RP | Detects movement in adjacent zones. May reveal false positives on malfunction.        |
-|      | **Nanite Injector**        | 1     | 2   | 2   | 3 RP | Restores 2d4 HP but adds “Corruption” (flaw roll at mission end).                     |
-|      | **Override Chip**          | 1     | 0   | -   | 1 RP | Single-use passkey. Auto-unlocks a standard door/terminal.                            |
-|      | **Plasma Welder**          | 2     | 2   | 3   | 3 RP | Cuts through bulkheads/doors (Task HP -1); can seal doors.                            |
-|      | **Portable Breach Charge** | 2     | 2   | 2   | 3 RP | Blows open bulkhead/door (Task HP instantly 0). 1 use only.                           |
-|      | **Repair Kit**             | 1     | 2   | 4   | 2 RP | Restores 1 DRR to armor/gear with Tech test. Consumable (3 uses).                     |
-|      | **Seismic Probe**          | 2     | 3   | 3   | 4 RP | Maps weak points; reduces Task HP by 2 when breaching/cutting.                        |
-|      | **Signal Scrambler**       | 1     | 1   | 3   | 2 RP | Jams comms in 1 zone; hostile AI lose 1 die to tests.                                 |
-|      | **Spectral Analyzer**      | 1     | 2   | 2   | 3 RP | Detects cloaked/stealthed targets. On malfunction: ghost echoes.                      |
-|      | **Standard Cyberdeck**     | 2     | 2   | 3   | 3 RP | Hack doors, turrets, terminals (Task HP -1).                                          |
-|      | **Stasis Spray**           | 1     | 1   | 4   | 2 RP | Freezes corrosion/acid/bleeding. Restores 1d4 HP if applied immediately after injury. |
-|      | **Survey Drone**           | 2     | 2   | 2   | 4 RP | Remote recon drone (range 3 zones). On malfunction: attracts attention.               |
-|      | **Thruster Pack**          | 2     | 2   | 2   | 4 RP | Short burst (move 2 zones, vertical or zero-G). On malfunction: spin out.             |
+| Tier | Item                   | Slots | SR  | MR  | Cost | Description                                                                                                                                      |
+| ---- | ---------------------- | ----- | --- | --- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 1    | **Flare Pack**         | 1     | 3   | 3   | 1    | Provides light within current zone. Contains 6 flares. Last 10 minutes.                                                                          |
+| 1    | **Glue Gun**           | 1     | 2   | 2   | 1    | Strong adhesive. Successes indicate strength of bond.                                                                                            |
+| 1    | **Grapple Gun**        | 1     | 2   | 2   | 3    | Grapple, 100' of line plus an internal winch. Can lift a single Trooper with gear.                                                               |
+| 1    | **Hacking Interface**  | 2     | 2   | 3   | 3    | Provides interface to external computer systems and security bypass software.                                                                    |
+| 1    | **Mini Lab**           | 2     | 3   | 2   | 4    | Allows chemical analysis of substances. Limited chemical synthesis.                                                                              |
+| 1    | **Mono-tool**          | 1     | 2   | 2   | 2    | Standard issue repair tool for heavy machinery.                                                                                                  |
+| 1    | **Motion Scanner**     | 2     | 2   | 2   | 3    | 2 Zone range. See Scanning rules.                                                                                                                |
+| 1    | **Neutralising Spray** | 1     | 2   | 3   | 1    | Each application neutralises small areas of acid, nanites or other corrosive substances. 3 uses.                                                 |
+| 1    | **Plasma Welder**      | 1     | 2   | 2   | 2    | Small welding device for sealing or cutting doors, or joining metal.                                                                             |
+| 1    | **Rope Printer**       | 2     | 1   | 2   | 1    | Prints a plastic line useable as rope, 10' per round. Can produce up to 150'.                                                                    |
+| 1    | **Solvent Spray**      | 1     | 2   | 3   | 1    | Can dissolve adhesives and resins. 3 uses. Each use applies to a 3' by 3' area.                                                                  |
+| 1    | **Tracking Device**    | 1     | 3   | 2   | 2    | Tracking device and 3 tags. Tags are adhesive and can be thrown.                                                                                 |
+| 1    | **Translator Module**  | 2     | 1   | 2   | 8    | Works with the basic vocabulary of 300 alien species.                                                                                            |
+| 1    | **Utility Belt**       | 1     | 2   | 2   | 3    | Stores any number of small useful items. You never know what you will find in your utility belt till you look.                                   |
+| 2    | **Drone Controller**   | 3     | 3   | 3   | 6    | Allows the remote control of a single drone.                                                                                                     |
+| 2    | **Gun Pod**            | 4     | 3   | 2   | 6    | Tripod gun turret mount. Can fit any 1 handed ranged weapon. Automatic targeting and fire control.                                               |
+| 2    | **Radio Pack**         | 3     | 2   | 2   | 4    | Allows long distance communication with mothership.                                                                                              |
+| 2    | **Secondary Computer** | 1     | 1   | 2   | 5    | Can offload a single program or be networked with suit computer to increase Skill Rating by 1. MR is the lowest MR of all the networked devices. |
+| 3    | **Hologram Projector** | 2     | 4   | 2   | 15   | Project an image that fills up to a 10' by 10' by 10' area.                                                                                      |
 
 ### 3.2 Armour Enhancements
 
-Ablative armour
+| Tier | Item                       | Slots | SR  | MR  | Cost | Description                                                                                                                                                                                                         |
+| ---- | -------------------------- | ----- | --- | --- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1    | **Chameleon Mesh**         | 2     | 3   | 4   | 4    | Mimetic polymer coating applied to armour surface can alter colour and texture to match surroundings. Each success provides 2 Stealth Points (see stealth rules). Malfunction Rating decreases by 1 after each use. |
+| 1    | **Integrated Scope**       | 1     | 2   | 4   | 2    | View magnification and target tracking. Adds 1 to ranged weapon dice pool.                                                                                                                                          |
+| 1    | **Mag Boots**              | 1     | 2   | 2   | 3    | Provides EVA and limited climbing capabilities.                                                                                                                                                                     |
+| 1    | **Sealant Foam**           | 1     | 1   | 4   | 2 RP |                                                                                                                                                                                                                     |
+| 1    | **Shield**                 |       |     |     |      |                                                                                                                                                                                                                     |
+| 2    | **Ablative Hauberk**       |       |     |     |      |                                                                                                                                                                                                                     |
+| 2    | **Advanced Autopilot**     | 1     | 3   | 3   | 10   | Improved autopilot capabilities.                                                                                                                                                                                    |
+| 2    | **Auxiliary Life Support** | 2     | 2   | 2   | 10   | Provides cryogenic capabilities and increases internal air reserves to 8 hours                                                                                                                                      |
+| 2    | **Armour Patch**           | 1     | 1   | 4   | 2 RP |                                                                                                                                                                                                                     |
+| 2    | **Jump Pack**              | 2     | 3   | 2   | 6    | Allows jumping up to 2 zones. Can jump over ground targets. EVA capabilities.                                                                                                                                       |
+| 2    | **Scanner Suite**          | 1     | 2   | 3   |      |                                                                                                                                                                                                                     |
+| 2    | **Scuba jetpack**          |       |     |     |      |                                                                                                                                                                                                                     |
+| 3    | **Advanced Comms Suite**   | 1     | 4   | 2   | 15   | Allows long distance communication with mothership and signal jamming / electronic countermeasures.                                                                                                                 |
+| 3    | **Extra Plating**          |       |     |     |      |                                                                                                                                                                                                                     |
+| 3    | **Shoulder Mount**         |       |     |     |      |                                                                                                                                                                                                                     |
 
 ### 3.3 Melee Weapons
 
 | Tier | Weapon Name             | Hands | Slots | Range | SR  | MR  | Dmg | Cost | Special                                        |
 | ---- | ----------------------- | ----- | ----- | ----- | --- | --- | --- | ---- | ---------------------------------------------- |
-| 1    | **Combat Knife**        | 1H    | 1     | Short | 2   | 4   | 1   | 1 RP | Always ready; can be thrown (Short, Dmg 1)     |
+| 1    | **Buzz Knife**          | 1H    | 1     | Short | 2   | 4   | 1   | 1 RP | Always ready; can be thrown (Short, Dmg 1)     |
+| 1    | **Power Axe**           | 2H    | 2     | Short | 3   | 2   | 3   | 4 RP | Armor-Piercing; Kickback                       |
+| 1    | **Ripper Sword**        | 1H    | 2     | Short | 3   | 3   | 2   | 3 RP | Brutal; Unreliable                             |
 | 1    | **Shock Baton**         | 1H    | 1     | Short | 2   | 3   | 1   | 2 RP | Stun: on 2+ successes, target loses 1 action   |
-| 2    | **Chainsword**          | 1H    | 2     | Short | 3   | 3   | 2   | 3 RP | Brutal; Unreliable                             |
-| 2    | **Power Axe**           | 2H    | 2     | Short | 3   | 2   | 3   | 4 RP | Armor-Piercing; Kickback                       |
+| 2    | **Energy Whip**         | 2H    | 2     | Short | 5   | 1   | 3   | 9 RP | Shredding; may sweep across 2 targets          |
+| 2    | **Hammer Fist**         | 2H    | 3     | Short | 4   | 2   | 3   | 6 RP | Counts as breaching tool (Task HP -1 per roll) |
 | 3    | **Monomolecular Blade** | 1H    | 1     | Short | 4   | 3   | 2   | 5 RP | Ignores armor on a crit                        |
-| 3    | **Chainfist**           | 2H    | 3     | Short | 4   | 2   | 3   | 6 RP | Counts as breaching tool (Task HP -1 per roll) |
-| 4    | **Power Hammer**        | 2H    | 3     | Short | 5   | 2   | 4   | 8 RP | Stuns all enemies in same zone on crit         |
-| 4    | **Void Scythe**         | 2H    | 2     | Short | 5   | 1   | 3   | 9 RP | Shredding; may sweep across 2 targets          |
+| 3    | **Power Hammer**        | 2H    | 3     | Short | 5   | 2   | 4   | 8 RP | Stuns all enemies in same zone on crit         |
 
 ### 3.4 Projectile Weapons
 
-| Tier | Weapon Name              | Hands | Slots | Range  | SR  | MR  | Dmg | Reload | Cost  | Special                                                  |
-| ---- | ------------------------ | ----- | ----- | ------ | --- | --- | --- | ------ | ----- | -------------------------------------------------------- |
-| 1    | **Slugspitter 9mm**      | 1H    | 1     | Short  | 2   | 3   | 1   | 1      | 1 RP  | Reliable, cheap sidearm                                  |
-| 1    | **Viper PDW**            | 2H    | 1     | Short  | 2   | 3   | 1   | 1      | 2 RP  | Burst capable                                            |
-| 1    | **Ironclad Mk.12**       | 2H    | 2     | Medium | 3   | 4   | 1   | 2      | 2 RP  | Rugged; +1 MR (hard to break)                            |
-| 1    | **Banshee .45**          | 1H    | 1     | Short  | 2   | 2   | 1   | 1      | 1 RP  | Deafening; +1 to Reaction rolls nearby                   |
-| 2    | **Direwolf Carbine**     | 2H    | 1     | Medium | 3   | 3   | 1   | 1      | 3 RP  | Suppression capable                                      |
-| 2    | **Havoc-10 Auto**        | 2H    | 1     | Short  | 3   | 2   | 1   | 1      | 3 RP  | Auto fire; reroll 1 die/attack; Unreliable               |
-| 2    | **Gorgon Handcannon**    | 1H    | 2     | Short  | 2   | 2   | 2   | 1      | 4 RP  | Devastating; MR 2                                        |
-| 2    | **Hammerjack**           | 2H    | 2     | Short  | 3   | 3   | 2   | 1      | 3 RP  | +1 die within Short range                                |
-| 3    | **Hellkite DMR**         | 2H    | 2     | Long   | 4   | 3   | 2   | 2      | 5 RP  | Precision: convert 1 success to crit                     |
-| 3    | **Maelstrom MG**         | 2H    | 2     | Medium | 4   | 2   | 1   | 2      | 6 RP  | Suppression & Full Suppression capable; Overheat         |
-| 3    | **Cerberus Tri-Pistol**  | 1H    | 1     | Short  | 3   | 2   | 1   | 1      | 5 RP  | Triple Burst; MR check each use                          |
-| 3    | **Tombstone Riotgun**    | 2H    | 2     | Short  | 4   | 3   | 2   | 2      | 5 RP  | Shredding shells: armor counts as -1 tier; Burst capable |
-| 4    | **Oblivion Rail-Pistol** | 1H    | 1     | Medium | 4   | 2   | 2   | 2      | 8 RP  | Armor-Piercing                                           |
-| 4    | **Hydra Rotary Cannon**  | 2H    | 3     | Medium | 5   | 2   | 1   | 3      | 10 RP | Auto fire (+2 SR); Full Suppression capable; Overheat    |
-| 4    | **Eidolon Silent Rifle** | 2H    | 1     | Long   | 4   | 3   | 2   | 2      | 7 RP  | Silent; malfunctions only on 2 ones                      |
-| 4    | **Colossus Breaker**     | 2H    | 3     | Long   | 5   | 1   | 3   | 3      | 10 RP | Each success = 3 dmg; recoil: -1 Reflex next round       |
+| Tier | Weapon Name              | Hands | Slots | Range  | SR  | MR  | Dmg | Reload | Cost  | Special                                               |
+| ---- | ------------------------ | ----- | ----- | ------ | --- | --- | --- | ------ | ----- | ----------------------------------------------------- |
+| 1    | **Banshee MG**           | 1H    | 1     | Short  | 2   | 2   | 1   | 1      | 1 RP  | Deafening; +1 to Reaction rolls nearby                |
+| 1    | **Gorgon SG**            | 2H    | 2     | Medium | 3   | 4   | 1   | 2      | 2 RP  | Rugged; +1 MR (hard to break)                         |
+| 1    | **Slug Thrower**         | 1H    | 1     | Short  | 2   | 3   | 1   | 1      | 1 RP  | Reliable, cheap sidearm                               |
+| 1    | **Viper VII**            | 2H    | 1     | Short  | 2   | 3   | 1   | 1      | 2 RP  | Burst capable                                         |
+| 2    | **Hammerjack**           | 2H    | 2     | Short  | 3   | 3   | 2   | 1      | 3 RP  | +1 die within Short range                             |
+| 2    | **Havoc-10 Auto**        | 2H    | 1     | Short  | 3   | 2   | 1   | 1      | 3 RP  | Auto fire; reroll 1 die/attack; Unreliable            |
+| 2    | **Hydra Rotary Cannon**  | 2H    | 3     | Medium | 5   | 2   | 1   | 3      | 10 RP | Auto fire (+2 SR); Full Suppression capable; Overheat |
+| 3    | **Eidolon Silent Rifle** | 2H    | 1     | Long   | 4   | 3   | 2   | 2      | 7 RP  | Silent; malfunctions only on 2 ones                   |
+| 3    | **Oblivion Rail-Pistol** | 1H    | 1     | Medium | 4   | 2   | 2   | 2      | 8 RP  | Armor-Piercing                                        |
+| 3    | **Wrist Launcher**       |       |       |        |     |     |     |        |       |                                                       |
 
-### 3.5 Special Weapons
+### 3.5 Energy Weapons
 
 | Tier | Weapon Name            | Hands | Slots | Range  | SR  | MR  | Dmg | Reload | Cost  | Special                                            |
 | ---- | ---------------------- | ----- | ----- | ------ | --- | --- | --- | ------ | ----- | -------------------------------------------------- |
 | 1    | **Incendiary Thrower** | 2H    | 2     | Short  | 2   | 3   | 2   | 1      | 3 RP  | Area attack (all in zone); Unreliable              |
 | 2    | **Flame Projector**    | 2H    | 2     | Short  | 3   | 2   | 2   | 2      | 4 RP  | Suppression capable; Shredding                     |
-| 2    | **Plasma Torch**       | 1H    | 1     | Short  | 2   | 3   | 2   | 1      | 3 RP  | Dual-use: melee cutter or ranged blast (Short)     |
 | 3    | **Heavy Flamer**       | 2H    | 3     | Medium | 4   | 2   | 3   | 2      | 6 RP  | Area attack (zone + adjacent); Overheat            |
 | 3    | **Plasma Ejector**     | 2H    | 2     | Medium | 4   | 2   | 3   | 2      | 6 RP  | Armor-Piercing; Friendly Splash                    |
+| 3    | **Wrist Flamer**       |       |       |        |     |     |     |        |       |                                                    |
 | 4    | **Inferno Cannon**     | 2H    | 3     | Long   | 5   | 2   | 4   | 3      | 9 RP  | Full Suppression capable; area burns for d3 rounds |
 | 4    | **Plasma Incinerator** | 2H    | 3     | Medium | 5   | 1   | 4   | 3      | 10 RP | Catastrophic on crit fail (auto Malfunction)       |
+
+Sonic weapons
+Blasters
+Stunners / Shockers
 
 ### 3.5 Ammunition
 
@@ -240,6 +250,12 @@ Explosives have:
 - **Damage dice** applied to all in zone.
 - **Malfunctions** (dud, misfire, dropped grenade, premature detonation).
 
+| Tier | Item                       | Slots | SR  | MR  | Cost | Description |
+| ---- | -------------------------- | ----- | --- | --- | ---- | ----------- |
+|      | **Portable Breach Charge** |       |     |     |      |             |
+|      | **Smoke Grenade**          |       |     |     |      |             |
+
+
 ### 3.7 Software Modules (Placeholder)
 
 **Standard Operating Procedure Modules (SOPMODs):**
@@ -251,6 +267,11 @@ Examples:
 - **Interrogation SOPMOD** - bonus for extracting info.
 - **Xenology SOPMOD** - knowledge of alien biology.
 - **Command SOPMOD** - improves Rally actions and Panic reduction.
+
+
+| Tier | Item | Slots | SR  | MR  | Cost | Description |
+| ---- | ---- | ----- | --- | --- | ---- | ----------- |
+|      |      |       |     |     |      |             |
 
 ### 3.8 Combat Drugs
 
@@ -267,7 +288,18 @@ Each drug has:
 - **Crash Effect.**
 - **Overdose/Malfunction chance.**
 
-### 3.9 Special Services
+| Tier | Item | Slots | SR  | MR  | Cost | Description |
+| ---- | ---- | ----- | --- | --- | ---- | ----------- |
+|      |      |       |     |     |      |             |
+
+### 3.9 Drones
+
+| Tier | Item             | Slots | SR  | MR  | Cost | Description |
+| ---- | ---------------- | ----- | --- | --- | ---- | ----------- |
+|      | **Survey Drone** |       |     |     |      |             |
+|      | **Flying Eye**   |       |     |     |      |             |
+
+### 3.10 Special Services
 
 Drop Pods, resupplies, advanced recon. Mission pod - offline support: extra equipment / resupply.
 
